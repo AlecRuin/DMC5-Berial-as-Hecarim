@@ -583,7 +583,7 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Texture: string = "ASSETS/Shared/Particles/bigglow02.dds"
+                Texture: string = "ASSETS/Shared/Particles/bigglow02.StrawberryRebuild.dds"
             }
             VfxEmitterDefinitionData {
                 Rate: embed = ValueFloat {
@@ -1515,7 +1515,7 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Texture: string = "ASSETS/Shared/Particles/bigglow02.dds"
+                Texture: string = "ASSETS/Shared/Particles/bigglow02.StrawberryRebuild.dds"
             }
             VfxEmitterDefinitionData {
                 Rate: embed = ValueFloat {
@@ -1598,7 +1598,7 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Texture: string = "ASSETS/Shared/Particles/bigglow02.dds"
+                Texture: string = "ASSETS/Shared/Particles/bigglow02.StrawberryRebuild.dds"
             }
             VfxEmitterDefinitionData {
                 Rate: embed = ValueFloat {
@@ -3207,7 +3207,7 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Texture: string = "ASSETS/Shared/Particles/bigglow02.dds"
+                Texture: string = "ASSETS/Shared/Particles/bigglow02.StrawberryRebuild.dds"
             }
             VfxEmitterDefinitionData {
                 Rate: embed = ValueFloat {
@@ -3573,7 +3573,7 @@ entries: map[hash,embed] = {
             }
             StaticMaterialShaderSamplerDef {
                 SamplerName: string = "OutlineMask_Texture"
-                TextureName: string = "ASSETS/Shared/Materials/black.Skarner_Rework.dds"
+                TextureName: string = "ASSETS/Shared/Materials/black.dds"
                 AddressU: u32 = 2
                 AddressV: u32 = 2
                 AddressW: u32 = 2
