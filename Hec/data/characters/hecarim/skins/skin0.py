@@ -35,24 +35,24 @@ linked: list[string] = {
 }
 entries: map[hash,embed] = {
     "Characters/Hecarim/Skins/Skin0" = SkinCharacterDataProperties {
-        SkinClassification: u32 = 1
-        ChampionSkinName: string = "Hecarim"
-        MetaDataTags: string = "faction:shadowisles,gender:male,race:undead,element:dark"
-        Loadscreen: embed = CensoredImage {
-            Image: string = "ASSETS/Characters/Hecarim/Skins/Base/HecarimLoadscreen_0.dds"
+        skinClassification: u32 = 1
+        championSkinName: string = "Hecarim"
+        metaDataTags: string = "faction:shadowisles,gender:male,race:undead,element:dark"
+        loadscreen: embed = CensoredImage {
+            image: string = "ASSETS/Characters/Hecarim/Skins/Base/HecarimLoadscreen_0.dds"
         }
-        SkinAudioProperties: embed = SkinAudioProperties {
-            TagEventList: list[string] = {
+        skinAudioProperties: embed = skinAudioProperties {
+            tagEventList: list[string] = {
                 "Hecarim"
             }
-            BankUnits: list2[embed] = {
+            bankUnits: list2[embed] = {
                 BankUnit {
-                    Name: string = "Hecarim_Base_SFX"
-                    BankPath: list[string] = {
+                    name: string = "Hecarim_Base_SFX"
+                    bankPath: list[string] = {
                         "ASSETS/Sounds/Wwise2016/SFX/Characters/Hecarim/Skins/Base/Hecarim_Base_SFX_audio.bnk"
                         "ASSETS/Sounds/Wwise2016/SFX/Characters/Hecarim/Skins/Base/Hecarim_Base_SFX_events.bnk"
                     }
-                    Events: list[string] = {
+                    events: list[string] = {
                         "Play_sfx_Hecarim_Dance3D_buffactivate"
                         "Play_sfx_Hecarim_Death3D_cast"
                         "Play_sfx_Hecarim_HecarimBasicAttack2_OnCast"
@@ -84,13 +84,13 @@ entries: map[hash,embed] = {
                     }
                 }
                 BankUnit {
-                    Name: string = "Hecarim_Base_VO"
-                    BankPath: list[string] = {
+                    name: string = "Hecarim_Base_VO"
+                    bankPath: list[string] = {
                         "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Hecarim/Skins/Base/Hecarim_Base_VO_audio.bnk"
                         "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Hecarim/Skins/Base/Hecarim_Base_VO_events.bnk"
                         "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Hecarim/Skins/Base/Hecarim_Base_VO_audio.wpk"
                     }
-                    Events: list[string] = {
+                    events: list[string] = {
                         "Play_vo_Hecarim_Attack2DGeneral"
                         "Play_vo_Hecarim_Death3D"
                         "Play_vo_Hecarim_HecarimBasicAttack2_cast3D"
@@ -104,351 +104,351 @@ entries: map[hash,embed] = {
                         "Play_vo_Hecarim_Move2DStandard"
                         "Play_vo_Hecarim_Taunt3DGeneral"
                     }
-                    VoiceOver: bool = true
+                    voiceOver: bool = true
                 }
             }
         }
-        SkinAnimationProperties: embed = SkinAnimationProperties {
-            AnimationGraphData: link = "Characters/Hecarim/Animations/Skin0"
+        skinAnimationProperties: embed = skinAnimationProperties {
+            animationGraphData: link = "Characters/Hecarim/Animations/Skin0"
         }
-        SkinMeshProperties: embed = SkinMeshDataProperties {
-            Skeleton: string = "ASSETS/Characters/Hecarim/Skins/Base/Hecarim.skl"
-            SimpleSkin: string = "ASSETS/Characters/Hecarim/Skins/Base/Hecarim.skn"
-            Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Hecarim_base_TX_CM.tex"
-            SkinScale: f32 = 1.25
-            SelfIllumination: f32 = 0.550000012
-            OverrideBoundingBox: option[vec3] = {
+        skinMeshProperties: embed = SkinMeshDataProperties {
+            skeleton: string = "ASSETS/Characters/Hecarim/Skins/Base/Hecarim.skl"
+            simpleSkin: string = "ASSETS/Characters/Hecarim/Skins/Base/Hecarim.skn"
+            texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Hecarim_base_TX_CM.tex"
+            skinScale: f32 = 1.25
+            selfIllumination: f32 = 0.550000012
+            overrideBoundingBox: option[vec3] = {
                 { 125, 230, 125 }
             }
-            MaterialOverride: list[embed] = {
+            materialOverride: list[embed] = {
                 SkinMeshDataProperties_MaterialOverride {
-                    Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Mat_Body.dds"
-                    Submesh: string = "Mat_Body"
+                    texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Mat_Body.dds"
+                    submesh: string = "Mat_Body"
                 }
             }
-            Material: link = "Characters/Hecarim/Skins/Skin0/Materials/Hecarim_Scrolling_ALphaMasked_inst"
-            ReflectionFresnelColor: rgba = { 0, 0, 0, 255 }
+            material: link = "Characters/Hecarim/Skins/Skin0/Materials/Hecarim_Scrolling_ALphaMasked_inst"
+            reflectionFresnelColor: rgba = { 0, 0, 0, 255 }
         }
-        ArmorMaterial: string = "Flesh"
-        DefaultAnimations: list[string] = {
+        armorMaterial: string = "Flesh"
+        defaultAnimations: list[string] = {
             "UVtail"
         }
-        IdleParticlesEffects: list[embed] = {
+        idleParticlesEffects: list[embed] = {
             SkinCharacterDataProperties_CharacterIdleEffect {
-                EffectKey: hash = "Hecarim_I_HeadTrail"
-                BoneName: string = "BUFFBONE_CSTM_HEAD"
+                effectKey: hash = "Hecarim_I_HeadTrail"
+                boneName: string = "BUFFBONE_CSTM_HEAD"
             }
             SkinCharacterDataProperties_CharacterIdleEffect {
-                EffectKey: hash = "Hecarim_I_TailTrail"
-                BoneName: string = "Tail"
+                effectKey: hash = "Hecarim_I_TailTrail"
+                boneName: string = "Tail"
             }
             SkinCharacterDataProperties_CharacterIdleEffect {
-                EffectKey: hash = "Hecarim_I_TailTrail"
-                BoneName: string = "Tail_b"
+                effectKey: hash = "Hecarim_I_TailTrail"
+                boneName: string = "Tail_b"
             }
             SkinCharacterDataProperties_CharacterIdleEffect {
-                EffectKey: hash = "Hecarim_I_TailTrail"
-                BoneName: string = "Tail_c"
+                effectKey: hash = "Hecarim_I_TailTrail"
+                boneName: string = "Tail_c"
             }
             SkinCharacterDataProperties_CharacterIdleEffect {
-                EffectKey: hash = "Hecarim_I_LegsIdle"
-                BoneName: string = "BUFFBONE_CSTM_THIGH_LF"
+                effectKey: hash = "Hecarim_I_LegsIdle"
+                boneName: string = "BUFFBONE_CSTM_THIGH_LF"
             }
             SkinCharacterDataProperties_CharacterIdleEffect {
-                EffectKey: hash = "Hecarim_I_LegsIdle"
-                BoneName: string = "BUFFBONE_CSTM_THIGH_RF"
+                effectKey: hash = "Hecarim_I_LegsIdle"
+                boneName: string = "BUFFBONE_CSTM_THIGH_RF"
             }
             SkinCharacterDataProperties_CharacterIdleEffect {
-                EffectKey: hash = "Hecarim_I_LegsIdle"
-                BoneName: string = "BUFFBONE_CSTM_THIGH_RB"
+                effectKey: hash = "Hecarim_I_LegsIdle"
+                boneName: string = "BUFFBONE_CSTM_THIGH_RB"
             }
             SkinCharacterDataProperties_CharacterIdleEffect {
-                EffectKey: hash = "Hecarim_I_LegsIdle"
-                BoneName: string = "BUFFBONE_CSTM_THIGH_LB"
+                effectKey: hash = "Hecarim_I_LegsIdle"
+                boneName: string = "BUFFBONE_CSTM_THIGH_LB"
             }
             SkinCharacterDataProperties_CharacterIdleEffect {
-                EffectKey: hash = "Hecarim_I_HoofIdle"
-                BoneName: string = "BUFFBONE_CSTM_HOOF_FR"
+                effectKey: hash = "Hecarim_I_HoofIdle"
+                boneName: string = "BUFFBONE_CSTM_HOOF_FR"
             }
             SkinCharacterDataProperties_CharacterIdleEffect {
-                EffectKey: hash = "Hecarim_I_HoofIdle"
-                BoneName: string = "BUFFBONE_CSTM_HOOF_FL"
+                effectKey: hash = "Hecarim_I_HoofIdle"
+                boneName: string = "BUFFBONE_CSTM_HOOF_FL"
             }
             SkinCharacterDataProperties_CharacterIdleEffect {
-                EffectKey: hash = "Hecarim_I_HoofIdle"
-                BoneName: string = "BUFFBONE_CSTM_HOOF_BR"
+                effectKey: hash = "Hecarim_I_HoofIdle"
+                boneName: string = "BUFFBONE_CSTM_HOOF_BR"
             }
             SkinCharacterDataProperties_CharacterIdleEffect {
-                EffectKey: hash = "Hecarim_I_HoofIdle"
-                BoneName: string = "BUFFBONE_CSTM_HOOF_BL"
+                effectKey: hash = "Hecarim_I_HoofIdle"
+                boneName: string = "BUFFBONE_CSTM_HOOF_BL"
             }
             SkinCharacterDataProperties_CharacterIdleEffect {
-                EffectKey: hash = 0xcab8b6eb
-                TargetBoneName: string = "BUFFBONE_CSTM_HEAD"
+                effectKey: hash = "Hecarim_Idle_Tail_Alpha"
+                targetBoneName: string = "BUFFBONE_CSTM_HEAD"
             }
         }
         mContextualActionData: link = "Characters/Hecarim/CAC/Hecarim_Base"
-        IconCircle: option[string] = {
+        iconCircle: option[string] = {
             "ASSETS/Characters/Hecarim/HUD/Hecarim_Circle_0.dds"
         }
-        IconSquare: option[string] = {
+        iconSquare: option[string] = {
             "ASSETS/Characters/Hecarim/HUD/Hecarim_Square_0.dds"
         }
-        HealthBarData: embed = CharacterHealthBarDataRecord {
-            UnitHealthBarStyle: u8 = 10
+        healthBarData: embed = CharacterHealthBarDataRecord {
+            unitHealthBarStyle: u8 = 10
         }
         mResourceResolver: link = "Characters/Hecarim/Skins/Skin0/Resources"
     }
     "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_Q_buf" = VfxSystemDefinitionData {
-        ComplexEmitterDefinitionData: list[pointer] = {
+        complexEmitterDefinitionData: list[pointer] = {
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = -1
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = -1
                 }
-                ParticleLinger: option[f32] = {
+                particleLinger: option[f32] = {
                     3
                 }
-                Lifetime: option[f32] = {
+                lifetime: option[f32] = {
                     0.100000001
                 }
-                IsSingleParticle: flag = true
-                EmitterName: string = "Avatar"
-                BindWeight: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                isSingleParticle: flag = true
+                emitterName: string = "Avatar"
+                bindWeight: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                Primitive: pointer = VfxPrimitiveAttachedMesh {
+                primitive: pointer = VfxPrimitiveAttachedMesh {
                     mMesh: embed = VfxMeshDefinitionData {
                         mLockMeshToAttachment: bool = true
                     }
                 }
-                BlendMode: u8 = 4
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 1, 0.0941176489, 0.0784313753, 1 }
+                blendMode: u8 = 4
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 1, 0.0941176489, 0.0784313753, 1 }
                 }
-                Pass: i16 = 5
-                DepthBiasFactors: vec2 = { -1, -4 }
-                DisableBackfaceCull: bool = true
-                ParticleIsLocalOrientation: flag = true
-                IsUniformScale: flag = true
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Cosmic_Mult.dds"
-                BirthUvScrollRate: embed = ValueVector2 {
-                    ConstantValue: vec2 = { -1.5, 0 }
+                pass: i16 = 5
+                depthBiasFactors: vec2 = { -1, -4 }
+                disableBackfaceCull: bool = true
+                particleIsLocalOrientation: flag = true
+                isUniformScale: flag = true
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Cosmic_Mult.dds"
+                birthUvScrollRate: embed = ValueVector2 {
+                    constantValue: vec2 = { -1.5, 0 }
                 }
-                UvScale: embed = ValueVector2 {
-                    ConstantValue: vec2 = { 6, 4 }
+                uvScale: embed = ValueVector2 {
+                    constantValue: vec2 = { 6, 4 }
                 }
-                UvRotation: embed = ValueFloat {
-                    ConstantValue: f32 = 90
+                uvRotation: embed = ValueFloat {
+                    constantValue: f32 = 90
                 }
-                TextureMult: pointer = 0xb097c1bd {
-                    TextureMult: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_base_Q_Weapon_Gradient.dds"
+                textureMult: pointer = VfxTextureMultDefinitionData {
+                    textureMult: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_base_Q_Weapon_Gradient.dds"
                 }
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = -1
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = -1
                 }
-                ParticleLinger: option[f32] = {
+                particleLinger: option[f32] = {
                     3
                 }
-                Lifetime: option[f32] = {
+                lifetime: option[f32] = {
                     0.100000001
                 }
-                IsSingleParticle: flag = true
-                EmitterName: string = "Avatar1"
-                BindWeight: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                isSingleParticle: flag = true
+                emitterName: string = "Avatar1"
+                bindWeight: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                Primitive: pointer = VfxPrimitiveAttachedMesh {
+                primitive: pointer = VfxPrimitiveAttachedMesh {
                     mMesh: embed = VfxMeshDefinitionData {
                         mLockMeshToAttachment: bool = true
                     }
                 }
-                BlendMode: u8 = 1
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 0.258823544, 0.101960786, 0.0705882385, 0.219999999 }
+                blendMode: u8 = 1
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 0.258823544, 0.101960786, 0.0705882385, 0.219999999 }
                 }
-                DepthBiasFactors: vec2 = { -1, -4 }
-                DisableBackfaceCull: bool = true
-                ParticleIsLocalOrientation: flag = true
-                IsUniformScale: flag = true
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_base_Q_Weapon_Gradient.dds"
+                depthBiasFactors: vec2 = { -1, -4 }
+                disableBackfaceCull: bool = true
+                particleIsLocalOrientation: flag = true
+                isUniformScale: flag = true
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_base_Q_Weapon_Gradient.dds"
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = -1
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = -1
                 }
-                ParticleLinger: option[f32] = {
+                particleLinger: option[f32] = {
                     3
                 }
-                Lifetime: option[f32] = {
+                lifetime: option[f32] = {
                     0.100000001
                 }
-                IsSingleParticle: flag = true
-                EmitterName: string = "Avatar2"
-                BindWeight: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                isSingleParticle: flag = true
+                emitterName: string = "Avatar2"
+                bindWeight: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                Primitive: pointer = VfxPrimitiveAttachedMesh {
+                primitive: pointer = VfxPrimitiveAttachedMesh {
                     mMesh: embed = VfxMeshDefinitionData {
                         mLockMeshToAttachment: bool = true
                     }
                 }
-                BlendMode: u8 = 4
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 0.580392182, 0.219607845, 0.149019614, 0.119999997 }
+                blendMode: u8 = 4
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 0.580392182, 0.219607845, 0.149019614, 0.119999997 }
                 }
-                Pass: i16 = 3
-                DepthBiasFactors: vec2 = { -1, -4 }
-                DisableBackfaceCull: bool = true
-                ParticleIsLocalOrientation: flag = true
-                IsUniformScale: flag = true
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_base_Q_Weapon_Gradient.dds"
+                pass: i16 = 3
+                depthBiasFactors: vec2 = { -1, -4 }
+                disableBackfaceCull: bool = true
+                particleIsLocalOrientation: flag = true
+                isUniformScale: flag = true
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_base_Q_Weapon_Gradient.dds"
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 10
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 10
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 0.5
-                    Dynamics: pointer = VfxAnimatedFloatVariableData {
-                        ProbabilityTables: list[pointer] = {
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 0.5
+                    dynamics: pointer = VfxAnimatedFloatVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     1
                                     1.25
                                 }
                             }
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[f32] = {
+                        values: list[f32] = {
                             0.5
                         }
                     }
                 }
-                ParticleLinger: option[f32] = {
+                particleLinger: option[f32] = {
                     11
                 }
-                EmitterName: string = "Temp_BurstUp"
-                BirthOrbitalVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 1, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                emitterName: string = "Temp_BurstUp"
+                birthOrbitalVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 1, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
                             }
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 1, 0 }
                         }
                     }
                 }
-                BirthVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 200, 30, 200 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                birthVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { 200, 30, 200 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
                             }
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.5
                                     1
                                 }
                             }
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
                             }
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 200, 30, 200 }
                             { -200, -30, -200 }
                         }
                     }
                 }
-                BirthDrag: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 3, 3, 3 }
+                birthDrag: embed = ValueVector3 {
+                    constantValue: vec3 = { 3, 3, 3 }
                 }
-                0x3bf0b4ed: pointer = 0xee39916f {
-                    EmitOffset: vec3 = { 145, -15, 1.5 }
+                SpawnShape: pointer = 0xee39916f {
+                    emitOffset: vec3 = { 145, -15, 1.5 }
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                EmitterPosition: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                         }
                     }
                 }
-                BlendMode: u8 = 5
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 0.68235296, 0.31764707, 0.278431386, 1 }
+                blendMode: u8 = 5
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 0.68235296, 0.31764707, 0.278431386, 1 }
                 }
-                Color: embed = ValueColor {
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.150000006
                             0.5
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 1, 1, 0 }
                             { 1, 0.58431375, 0.580392182, 1 }
                             { 0.152941182, 0.0627451017, 0.0196078438, 1 }
@@ -456,21 +456,21 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                IsDirectionOriented: flag = true
-                IsUniformScale: flag = true
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 2, 30, 50 }
+                isDirectionOriented: flag = true
+                isUniformScale: flag = true
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 2, 30, 50 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             0.150000006
                             0.265079379
                             0.758708596
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                             { 0.5, 1, 0 }
                             { 3, 1, 1 }
@@ -479,53 +479,53 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Idle_Embers.dds"
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Idle_Embers.dds"
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 2
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 2
                 }
-                ParticleLinger: option[f32] = {
+                particleLinger: option[f32] = {
                     12
                 }
-                EmitterName: string = "Temp_GroundGlow1"
-                BindWeight: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                emitterName: string = "Temp_GroundGlow1"
+                bindWeight: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                0x3bf0b4ed: pointer = 0xee39916f {
-                    EmitOffset: vec3 = { 145, 15, 1.5 }
+                SpawnShape: pointer = 0xee39916f {
+                    emitOffset: vec3 = { 145, 15, 1.5 }
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                EmitterPosition: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                         }
                     }
                 }
-                BlendMode: u8 = 4
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 1, 0.611764729, 0.470588237, 0.300000012 }
+                blendMode: u8 = 4
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 1, 0.611764729, 0.470588237, 0.300000012 }
                 }
-                Color: embed = ValueColor {
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.300000012
                             0.75
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 1, 1, 0 }
                             { 1, 1, 1, 0.250003815 }
                             { 0.564705908, 0.470588237, 0.13333334, 1 }
@@ -533,231 +533,231 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                MiscRenderFlags: u8 = 1
-                ParticleIsLocalOrientation: flag = true
-                IsUniformScale: flag = true
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 1, 1, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                miscRenderFlags: u8 = 1
+                particleIsLocalOrientation: flag = true
+                isUniformScale: flag = true
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 1, 1, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     90
                                 }
                             }
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     1
                                     360
                                 }
                             }
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 1, 1, 0 }
                         }
                     }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 100, 100, 10 }
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 100, 100, 10 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0.5, 0.5, 0 }
                             { 1, 1, 1 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Shared/Particles/bigglow02.StrawberryRebuild.dds"
+                texture: string = "ASSETS/Shared/Particles/bigglow02.StrawberryRebuild.dds"
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 45
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 45
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 0.5
-                    Dynamics: pointer = VfxAnimatedFloatVariableData {
-                        ProbabilityTables: list[pointer] = {
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 0.5
+                    dynamics: pointer = VfxAnimatedFloatVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.649999976
                                     1
                                 }
                             }
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[f32] = {
+                        values: list[f32] = {
                             0.5
                         }
                     }
                 }
-                ParticleLinger: option[f32] = {
+                particleLinger: option[f32] = {
                     0.5
                 }
-                EmitterName: string = "startBlast"
-                BirthVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 120, 100, 100 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                emitterName: string = "startBlast"
+                birthVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { 120, 100, 100 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
                             }
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
                             }
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
                             }
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 120, 100, 100 }
                         }
                     }
                 }
-                BirthDrag: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 1.5, 2, 1.5 }
+                birthDrag: embed = ValueVector3 {
+                    constantValue: vec3 = { 1.5, 2, 1.5 }
                 }
-                WorldAcceleration: embed = IntegratedValueVector3 {
-                    ConstantValue: vec3 = { 0, 500, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                worldAcceleration: embed = IntegratedValueVector3 {
+                    constantValue: vec3 = { 0, 500, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 500, 0 }
                         }
                     }
                 }
-                BindWeight: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                bindWeight: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                0x3bf0b4ed: pointer = 0xee39916f {
-                    EmitOffset: vec3 = { 145, 0, 0 }
+                SpawnShape: pointer = 0xee39916f {
+                    emitOffset: vec3 = { 145, 0, 0 }
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                EmitterPosition: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                         }
                     }
                 }
-                0x4ffce322: pointer = 0xb13097f0 {
-                    ScaleBirthScaleByBoundObjectSize: f32 = 0.00700000022
+                FlexShapeDefinition: pointer = VfxFlexShapeDefinitionData {
+                    scaleBirthScaleByBoundObjectSize: f32 = 0.00700000022
                 }
-                BlendMode: u8 = 1
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 1, 1, 1, 0.749996185 }
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                blendMode: u8 = 1
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 1, 1, 1, 0.749996185 }
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 1, 1, 0.749996185 }
                         }
                     }
                 }
-                Color: embed = ValueColor {
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.150000006
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 1, 1, 0 }
                             { 0.749019623, 0.752941191, 0.75686276, 1 }
                             { 0.0941176489, 0.0941176489, 0.0941176489, 0 }
                         }
                     }
                 }
-                AlphaRef: u8 = 0
-                AlphaErosionDefinition: pointer = VfxAlphaErosionDefinitionData {
-                    ErosionDriveCurve: embed = ValueFloat {
-                        Dynamics: pointer = VfxAnimatedFloatVariableData {
-                            Times: list[f32] = {
+                alphaRef: u8 = 0
+                alphaErosionDefinition: pointer = VfxAlphaErosionDefinitionData {
+                    erosionDriveCurve: embed = ValueFloat {
+                        dynamics: pointer = VfxAnimatedFloatVariableData {
+                            times: list[f32] = {
                                 0
                                 1
                             }
-                            Values: list[f32] = {
+                            values: list[f32] = {
                                 0
                                 1
                             }
                         }
                     }
-                    ErosionFeatherIn: f32 = 0.600000024
-                    ErosionFeatherOut: f32 = 0.600000024
-                    ErosionSliceWidth: f32 = 1.60000002
-                    ErosionMapName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Wispy.dds"
-                    ErosionMapChannelMixer: embed = ValueColor {
-                        ConstantValue: vec4 = { 1, 0, 0, 0 }
+                    erosionFeatherIn: f32 = 0.600000024
+                    erosionFeatherOut: f32 = 0.600000024
+                    erosionSliceWidth: f32 = 1.60000002
+                    erosionMapName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Wispy.dds"
+                    erosionMapChannelMixer: embed = ValueColor {
+                        constantValue: vec4 = { 1, 0, 0, 0 }
                     }
                 }
-                ParticleIsLocalOrientation: flag = true
-                IsUniformScale: flag = true
-                IsRandomStartFrame: flag = true
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 1, 90, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                particleIsLocalOrientation: flag = true
+                isUniformScale: flag = true
+                isRandomStartFrame: flag = true
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 1, 90, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -360
                                     360
                                 }
@@ -765,24 +765,24 @@ entries: map[hash,embed] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 1, 90, 0 }
                         }
                     }
                 }
-                BirthRotationalVelocity0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 80, 0, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                birthRotationalVelocity0: embed = ValueVector3 {
+                    constantValue: vec3 = { 80, 0, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
@@ -790,24 +790,24 @@ entries: map[hash,embed] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 80, 0, 0 }
                         }
                     }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 40, 1, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 40, 1, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.200000003
                                     1
                                 }
@@ -815,211 +815,211 @@ entries: map[hash,embed] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 40, 1, 0 }
                         }
                     }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0.800000012, 0.800000012, 0.800000012 }
                             { 1, 1, 1 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Wispy.dds"
-                NumFrames: u16 = 4
-                PaletteDefinition: pointer = VfxPaletteDefinitionData {
-                    PaletteTexture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_colorGrad.dds"
-                    PaletteSelector: embed = ValueVector3 {
-                        ConstantValue: vec3 = { 4, 0, 0 }
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Wispy.dds"
+                numFrames: u16 = 4
+                paletteDefinition: pointer = VfxPaletteDefinitionData {
+                    paletteTexture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_colorGrad.dds"
+                    paletteSelector: embed = ValueVector3 {
+                        constantValue: vec3 = { 4, 0, 0 }
                     }
-                    PaletteCount: i32 = 32
+                    paletteCount: i32 = 32
                 }
-                TexDiv: vec2 = { 2, 2 }
+                texDiv: vec2 = { 2, 2 }
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 30
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 30
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 0.800000012
-                    Dynamics: pointer = VfxAnimatedFloatVariableData {
-                        ProbabilityTables: list[pointer] = {
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 0.800000012
+                    dynamics: pointer = VfxAnimatedFloatVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.649999976
                                     1
                                 }
                             }
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[f32] = {
+                        values: list[f32] = {
                             0.800000012
                         }
                     }
                 }
-                ParticleLinger: option[f32] = {
+                particleLinger: option[f32] = {
                     0.800000012
                 }
-                EmitterName: string = "startBlast1"
-                BirthVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 10, 10, 10 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                emitterName: string = "startBlast1"
+                birthVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { 10, 10, 10 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
                             }
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
                             }
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
                             }
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 10, 10, 10 }
                         }
                     }
                 }
-                BirthDrag: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0.5, 0.5, 0.5 }
+                birthDrag: embed = ValueVector3 {
+                    constantValue: vec3 = { 0.5, 0.5, 0.5 }
                 }
-                WorldAcceleration: embed = IntegratedValueVector3 {
-                    ConstantValue: vec3 = { 0, 500, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                worldAcceleration: embed = IntegratedValueVector3 {
+                    constantValue: vec3 = { 0, 500, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 500, 0 }
                         }
                     }
                 }
-                BindWeight: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                bindWeight: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                0x3bf0b4ed: pointer = 0xee39916f {
-                    EmitOffset: vec3 = { 145, 0, 0 }
+                SpawnShape: pointer = 0xee39916f {
+                    emitOffset: vec3 = { 145, 0, 0 }
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                EmitterPosition: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                         }
                     }
                 }
-                0x4ffce322: pointer = 0xb13097f0 {
-                    ScaleBirthScaleByBoundObjectSize: f32 = 0.00700000022
+                FlexShapeDefinition: pointer = VfxFlexShapeDefinitionData {
+                    scaleBirthScaleByBoundObjectSize: f32 = 0.00700000022
                 }
-                BlendMode: u8 = 4
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 0, 1, 0.579995394, 0.500007629 }
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                blendMode: u8 = 4
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 0, 1, 0.579995394, 0.500007629 }
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 0, 0.250980407, 0.500007629 }
                         }
                     }
                 }
-                Color: embed = ValueColor {
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.300000012
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 1, 1, 0 }
                             { 1, 1, 1, 0.620004594 }
                             { 1, 1, 1, 0 }
                         }
                     }
                 }
-                Pass: i16 = 1
-                AlphaRef: u8 = 0
-                AlphaErosionDefinition: pointer = VfxAlphaErosionDefinitionData {
-                    ErosionDriveCurve: embed = ValueFloat {
-                        Dynamics: pointer = VfxAnimatedFloatVariableData {
-                            Times: list[f32] = {
+                pass: i16 = 1
+                alphaRef: u8 = 0
+                alphaErosionDefinition: pointer = VfxAlphaErosionDefinitionData {
+                    erosionDriveCurve: embed = ValueFloat {
+                        dynamics: pointer = VfxAnimatedFloatVariableData {
+                            times: list[f32] = {
                                 0
                                 1
                             }
-                            Values: list[f32] = {
+                            values: list[f32] = {
                                 0
                                 1
                             }
                         }
                     }
-                    ErosionFeatherIn: f32 = 0.600000024
-                    ErosionFeatherOut: f32 = 0.600000024
-                    ErosionSliceWidth: f32 = 1.60000002
-                    ErosionMapName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Wispy.dds"
-                    ErosionMapChannelMixer: embed = ValueColor {
-                        ConstantValue: vec4 = { 1, 0, 0, 0 }
+                    erosionFeatherIn: f32 = 0.600000024
+                    erosionFeatherOut: f32 = 0.600000024
+                    erosionSliceWidth: f32 = 1.60000002
+                    erosionMapName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Wispy.dds"
+                    erosionMapChannelMixer: embed = ValueColor {
+                        constantValue: vec4 = { 1, 0, 0, 0 }
                     }
                 }
-                ParticleIsLocalOrientation: flag = true
-                IsUniformScale: flag = true
-                IsRandomStartFrame: flag = true
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 1, 90, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                particleIsLocalOrientation: flag = true
+                isUniformScale: flag = true
+                isRandomStartFrame: flag = true
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 1, 90, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -360
                                     360
                                 }
@@ -1027,24 +1027,24 @@ entries: map[hash,embed] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 1, 90, 0 }
                         }
                     }
                 }
-                BirthRotationalVelocity0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 40, 0, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                birthRotationalVelocity0: embed = ValueVector3 {
+                    constantValue: vec3 = { 40, 0, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
@@ -1052,24 +1052,24 @@ entries: map[hash,embed] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 40, 0, 0 }
                         }
                     }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 30, 1, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 30, 1, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.200000003
                                     1
                                 }
@@ -1077,105 +1077,105 @@ entries: map[hash,embed] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 30, 1, 0 }
                         }
                     }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0.800000012, 0.800000012, 0.800000012 }
                             { 1, 1, 1 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Wispy.dds"
-                NumFrames: u16 = 4
-                TexDiv: vec2 = { 2, 2 }
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Wispy.dds"
+                numFrames: u16 = 4
+                texDiv: vec2 = { 2, 2 }
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 120
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 120
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 0.699999988
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 0.699999988
                 }
-                ParticleLinger: option[f32] = {
+                particleLinger: option[f32] = {
                     1
                 }
-                Lifetime: option[f32] = {
+                lifetime: option[f32] = {
                     8
                 }
-                EmitterName: string = "trail_flourish_skin"
-                Importance: u8 = 0
-                BirthVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 100, 0 }
+                emitterName: string = "trail_flourish_skin"
+                importance: u8 = 0
+                birthVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 100, 0 }
                 }
-                BirthDrag: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 0, 1 }
+                birthDrag: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 0, 1 }
                 }
-                WorldAcceleration: embed = IntegratedValueVector3 {
-                    ConstantValue: vec3 = { 0, 300, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                worldAcceleration: embed = IntegratedValueVector3 {
+                    constantValue: vec3 = { 0, 300, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 300, 0 }
                         }
                     }
                 }
-                0x3bf0b4ed: pointer = 0xee39916f {
-                    EmitOffset: vec3 = { 145, 0, 0 }
+                SpawnShape: pointer = 0xee39916f {
+                    emitOffset: vec3 = { 145, 0, 0 }
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                EmitterPosition: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                         }
                     }
                 }
-                Primitive: pointer = VfxPrimitiveCameraTrail {
+                primitive: pointer = VfxPrimitiveCameraTrail {
                     mTrail: embed = VfxTrailDefinitionData {
                         mMode: u8 = 1
                         mCutoff: f32 = 1050
                         mBirthTilingSize: embed = ValueVector3 {
-                            ConstantValue: vec3 = { 800, 0, 0 }
+                            constantValue: vec3 = { 800, 0, 0 }
                         }
                         mSmoothingMode: u8 = 2
                         mMaxAddedPerFrame: i32 = 820
                     }
                 }
-                BlendMode: u8 = 4
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 1, 1, 1, 0.310002297 }
+                blendMode: u8 = 4
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 1, 1, 1, 0.310002297 }
                 }
-                Color: embed = ValueColor {
-                    ConstantValue: vec4 = { 0.768627465, 0.960784316, 1, 1 }
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    constantValue: vec4 = { 0.768627465, 0.960784316, 1, 1 }
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.0500000007
                             0.5
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 0.960784316, 0.635294139, 0.78039217, 0 }
                             { 0.815686285, 0.0862745121, 0.180392161, 0.749996185 }
                             { 0.721568644, 0.274509817, 0.0196078438, 0.450980395 }
@@ -1183,133 +1183,133 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Pass: i16 = 1
-                DepthBiasFactors: vec2 = { -1, -40 }
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 0, 90 }
+                pass: i16 = 1
+                depthBiasFactors: vec2 = { -1, -40 }
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 0, 90 }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 60, 100, 0 }
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 60, 100, 0 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             0.5
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 1, 1, 1 }
                             { 0.300000012, 0.300000012, 0.5 }
                             { 2, 0, 0 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Smoke_Trail02.dds"
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Smoke_Trail02.dds"
             }
         }
-        ParticleName: string = "Hecarim_Base_Q_buf"
-        ParticlePath: string = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_Q_buf"
+        particleName: string = "Hecarim_Base_Q_buf"
+        particlePath: string = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_Q_buf"
     }
     "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_E_weapon_buf" = VfxSystemDefinitionData {
-        ComplexEmitterDefinitionData: list[pointer] = {
+        complexEmitterDefinitionData: list[pointer] = {
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 4
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 4
                 }
-                Lifetime: option[f32] = {
+                lifetime: option[f32] = {
                     4
                 }
-                IsSingleParticle: flag = true
-                EmitterName: string = "WeaponGlow_Mesh"
-                BindWeight: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                isSingleParticle: flag = true
+                emitterName: string = "WeaponGlow_Mesh"
+                bindWeight: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, -3, 0 }
+                EmitterPosition: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, -3, 0 }
                 }
-                0x4ffce322: pointer = 0xb13097f0 {
-                    ScaleBirthScaleByBoundObjectSize: f32 = 0.00499999989
+                FlexShapeDefinition: pointer = VfxFlexShapeDefinitionData {
+                    scaleBirthScaleByBoundObjectSize: f32 = 0.00499999989
                 }
-                Primitive: pointer = VfxPrimitiveMesh {
+                primitive: pointer = VfxPrimitiveMesh {
                     mMesh: embed = VfxMeshDefinitionData {
                         mSimpleMeshName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Z_Weapon.sco"
                     }
                 }
-                ParticleColorTexture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/common_color-steadyblue.dds"
-                BlendMode: u8 = 4
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 0.262745112, 0.13333334, 0.168627456, 0.769999981 }
+                particleColorTexture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/common_color-steadyblue.dds"
+                blendMode: u8 = 4
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 0.262745112, 0.13333334, 0.168627456, 0.769999981 }
                 }
-                ReflectionDefinition: pointer = VfxReflectionDefinitionData {
-                    Fresnel: f32 = 0.5
-                    FresnelColor: vec4 = { 0.717647076, 0.243137255, 0.168627456, 0 }
+                reflectionDefinition: pointer = VfxReflectionDefinitionData {
+                    fresnel: f32 = 0.5
+                    fresnelColor: vec4 = { 0.717647076, 0.243137255, 0.168627456, 0 }
                 }
-                DepthBiasFactors: vec2 = { -1, -10 }
-                ParticleIsLocalOrientation: flag = true
-                IsUniformScale: flag = true
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 180, 90 }
+                depthBiasFactors: vec2 = { -1, -10 }
+                particleIsLocalOrientation: flag = true
+                isUniformScale: flag = true
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 180, 90 }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0.699999988, 1, 1 }
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 0.699999988, 1, 1 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 1, 1, 1 }
                             { 1, 1.04999995, 1.14999998 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Z_color-bandages.dds"
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Z_color-bandages.dds"
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 4
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 4
                 }
-                Lifetime: option[f32] = {
+                lifetime: option[f32] = {
                     1
                 }
-                IsSingleParticle: flag = true
-                EmitterName: string = "Temp_Mesh"
-                BindWeight: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                isSingleParticle: flag = true
+                emitterName: string = "Temp_Mesh"
+                bindWeight: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 250, 0, 0 }
+                EmitterPosition: embed = ValueVector3 {
+                    constantValue: vec3 = { 250, 0, 0 }
                 }
-                0x4ffce322: pointer = 0xb13097f0 {
-                    ScaleBirthScaleByBoundObjectSize: f32 = 0.00499999989
+                FlexShapeDefinition: pointer = VfxFlexShapeDefinitionData {
+                    scaleBirthScaleByBoundObjectSize: f32 = 0.00499999989
                 }
-                Primitive: pointer = VfxPrimitiveMesh {
+                primitive: pointer = VfxPrimitiveMesh {
                     mMesh: embed = VfxMeshDefinitionData {
                         mSimpleMeshName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_E_Plume_Head.scb"
                     }
                 }
-                BlendMode: u8 = 4
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 0.250980407, 0.101960786, 0.0980392173, 1 }
+                blendMode: u8 = 4
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 0.250980407, 0.101960786, 0.0980392173, 1 }
                 }
-                Color: embed = ValueColor {
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.100000001
                             0.600000024
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 1, 1, 0 }
                             { 1, 1, 1, 1 }
                             { 1, 1, 1, 1 }
@@ -1317,78 +1317,78 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Pass: i16 = 10
-                ParticleIsLocalOrientation: flag = true
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 0, -90 }
+                pass: i16 = 10
+                particleIsLocalOrientation: flag = true
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 0, -90 }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 1.25, 3, 1.25 }
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 1.25, 3, 1.25 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             0.129999995
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 1, 0.5, 1 }
                             { 1, 3, 1 }
                             { 2, 5, 2 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/common_HuntersCall_eff2_base_prgba.dds"
-                UvRotation: embed = ValueFloat {
-                    ConstantValue: f32 = -90
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/common_HuntersCall_eff2_base_prgba.dds"
+                uvRotation: embed = ValueFloat {
+                    constantValue: f32 = -90
                 }
-                TextureMult: pointer = 0xb097c1bd {
-                    TextureMult: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_W_Screen_Flames_Soft.dds"
-                    BirthUvScrollRateMult: embed = ValueVector2 {
-                        ConstantValue: vec2 = { 0, -3 }
+                textureMult: pointer = VfxTextureMultDefinitionData {
+                    textureMult: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_W_Screen_Flames_Soft.dds"
+                    birthUvScrollRateMult: embed = ValueVector2 {
+                        constantValue: vec2 = { 0, -3 }
                     }
                 }
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 4
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 4
                 }
-                Lifetime: option[f32] = {
+                lifetime: option[f32] = {
                     1
                 }
-                IsSingleParticle: flag = true
-                EmitterName: string = "Temp_Mesh2"
-                BindWeight: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                isSingleParticle: flag = true
+                emitterName: string = "Temp_Mesh2"
+                bindWeight: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 250, 0, 0 }
+                EmitterPosition: embed = ValueVector3 {
+                    constantValue: vec3 = { 250, 0, 0 }
                 }
-                0x4ffce322: pointer = 0xb13097f0 {
-                    ScaleBirthScaleByBoundObjectSize: f32 = 0.00499999989
+                FlexShapeDefinition: pointer = VfxFlexShapeDefinitionData {
+                    scaleBirthScaleByBoundObjectSize: f32 = 0.00499999989
                 }
-                Primitive: pointer = VfxPrimitiveMesh {
+                primitive: pointer = VfxPrimitiveMesh {
                     mMesh: embed = VfxMeshDefinitionData {
                         mSimpleMeshName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_E_Plume_Head.scb"
                     }
                 }
-                BlendMode: u8 = 4
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 0.941176474, 0.600000024, 0.168627456, 0.209999993 }
+                blendMode: u8 = 4
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 0.941176474, 0.600000024, 0.168627456, 0.209999993 }
                 }
-                Color: embed = ValueColor {
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.100000001
                             0.600000024
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 1, 1, 0 }
                             { 1, 1, 1, 1 }
                             { 1, 1, 1, 1 }
@@ -1396,78 +1396,78 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Pass: i16 = 10
-                ParticleIsLocalOrientation: flag = true
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 0, -90 }
+                pass: i16 = 10
+                particleIsLocalOrientation: flag = true
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 0, -90 }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 1.25, 3, 1.25 }
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 1.25, 3, 1.25 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             0.129999995
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 1, 0.5, 1 }
                             { 1, 3, 1 }
                             { 2, 5, 2 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_W_Color-Rampdown.dds"
-                UvRotation: embed = ValueFloat {
-                    ConstantValue: f32 = 90
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_W_Color-Rampdown.dds"
+                uvRotation: embed = ValueFloat {
+                    constantValue: f32 = 90
                 }
-                TextureMult: pointer = 0xb097c1bd {
-                    TextureMult: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_E_Spear_Impact_Diust_burst.dds"
-                    UvScaleMult: embed = ValueVector2 {
-                        ConstantValue: vec2 = { 0.5, 1 }
+                textureMult: pointer = VfxTextureMultDefinitionData {
+                    textureMult: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_E_Spear_Impact_Diust_burst.dds"
+                    uvScaleMult: embed = ValueVector2 {
+                        constantValue: vec2 = { 0.5, 1 }
                     }
-                    BirthUvScrollRateMult: embed = ValueVector2 {
-                        ConstantValue: vec2 = { 1, -3 }
+                    birthUvScrollRateMult: embed = ValueVector2 {
+                        constantValue: vec2 = { 1, -3 }
                     }
                 }
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 4
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 4
                 }
-                ParticleLinger: option[f32] = {
+                particleLinger: option[f32] = {
                     12
                 }
-                Lifetime: option[f32] = {
+                lifetime: option[f32] = {
                     1
                 }
-                IsSingleParticle: flag = true
-                EmitterName: string = "Temp_GroundGlow"
-                BindWeight: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                isSingleParticle: flag = true
+                emitterName: string = "Temp_GroundGlow"
+                bindWeight: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                0x4ffce322: pointer = 0xb13097f0 {
-                    ScaleBirthScaleByBoundObjectSize: f32 = 0.00499999989
+                FlexShapeDefinition: pointer = VfxFlexShapeDefinitionData {
+                    scaleBirthScaleByBoundObjectSize: f32 = 0.00499999989
                 }
-                Primitive: pointer = VfxPrimitiveArbitraryQuad {}
-                BlendMode: u8 = 4
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 1, 1, 1, 0.420004576 }
+                primitive: pointer = VfxPrimitiveArbitraryQuad {}
+                blendMode: u8 = 4
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 1, 1, 1, 0.420004576 }
                 }
-                Color: embed = ValueColor {
-                    ConstantValue: vec4 = { 0.458823532, 0.90196079, 1, 1 }
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    constantValue: vec4 = { 0.458823532, 0.90196079, 1, 1 }
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.25
                             0.75
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 0.647058845, 0.458823532, 0 }
                             { 1, 0.647058845, 0.458823532, 1 }
                             { 1, 0.647058845, 0.458823532, 1 }
@@ -1475,81 +1475,81 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                ParticleIsLocalOrientation: flag = true
-                IsRotationEnabled: flag = true
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 90, 1, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                particleIsLocalOrientation: flag = true
+                isRotationEnabled: flag = true
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 90, 1, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     90
                                 }
                             }
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 90, 1, 0 }
                         }
                     }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 150, 25, 50 }
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 150, 25, 50 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0.5, 0.5, 0 }
                             { 1, 1, 1 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Shared/Particles/bigglow02.StrawberryRebuild.dds"
+                texture: string = "ASSETS/Shared/Particles/bigglow02.StrawberryRebuild.dds"
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 4
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 4
                 }
-                ParticleLinger: option[f32] = {
+                particleLinger: option[f32] = {
                     12
                 }
-                Lifetime: option[f32] = {
+                lifetime: option[f32] = {
                     1
                 }
-                IsSingleParticle: flag = true
-                EmitterName: string = "Temp_GroundGlow1"
-                BindWeight: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                isSingleParticle: flag = true
+                emitterName: string = "Temp_GroundGlow1"
+                bindWeight: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                0x4ffce322: pointer = 0xb13097f0 {
-                    ScaleBirthScaleByBoundObjectSize: f32 = 0.00499999989
+                FlexShapeDefinition: pointer = VfxFlexShapeDefinitionData {
+                    scaleBirthScaleByBoundObjectSize: f32 = 0.00499999989
                 }
-                Primitive: pointer = VfxPrimitiveArbitraryQuad {}
-                BlendMode: u8 = 2
-                Color: embed = ValueColor {
-                    ConstantValue: vec4 = { 1, 0.113725491, 0.125490203, 1 }
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                primitive: pointer = VfxPrimitiveArbitraryQuad {}
+                blendMode: u8 = 2
+                color: embed = ValueColor {
+                    constantValue: vec4 = { 1, 0.113725491, 0.125490203, 1 }
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.25
                             0.75
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 0.113725491, 0.125490203, 0 }
                             { 1, 0.113725491, 0.125490203, 1 }
                             { 1, 0.113725491, 0.125490203, 1 }
@@ -1557,87 +1557,87 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Pass: i16 = -10
-                ParticleIsLocalOrientation: flag = true
-                IsRotationEnabled: flag = true
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 1, 1, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                pass: i16 = -10
+                particleIsLocalOrientation: flag = true
+                isRotationEnabled: flag = true
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 1, 1, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     90
                                 }
                             }
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 1, 1, 0 }
                         }
                     }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 150, 75, 50 }
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 150, 75, 50 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0.5, 0.5, 0 }
                             { 1, 1, 1 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Shared/Particles/bigglow02.StrawberryRebuild.dds"
+                texture: string = "ASSETS/Shared/Particles/bigglow02.StrawberryRebuild.dds"
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 0.75
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 0.75
                 }
-                Lifetime: option[f32] = {
+                lifetime: option[f32] = {
                     1
                 }
-                IsSingleParticle: flag = true
-                EmitterName: string = "Temp_Mesh3"
-                BindWeight: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                isSingleParticle: flag = true
+                emitterName: string = "Temp_Mesh3"
+                bindWeight: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 250, 0, 0 }
+                EmitterPosition: embed = ValueVector3 {
+                    constantValue: vec3 = { 250, 0, 0 }
                 }
-                0x4ffce322: pointer = 0xb13097f0 {
-                    ScaleBirthScaleByBoundObjectSize: f32 = 0.00499999989
+                FlexShapeDefinition: pointer = VfxFlexShapeDefinitionData {
+                    scaleBirthScaleByBoundObjectSize: f32 = 0.00499999989
                 }
-                Primitive: pointer = VfxPrimitiveMesh {
+                primitive: pointer = VfxPrimitiveMesh {
                     mMesh: embed = VfxMeshDefinitionData {
                         mSimpleMeshName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_E_Plume_Head.scb"
                     }
                 }
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 0.937254906, 0.698039234, 0.549019635, 1 }
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 0.937254906, 0.698039234, 0.549019635, 1 }
                 }
-                Color: embed = ValueColor {
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.100000001
                             0.600000024
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 1, 1, 0 }
                             { 1, 1, 1, 1 }
                             { 1, 1, 1, 1 }
@@ -1645,95 +1645,95 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Pass: i16 = 10
-                ParticleIsLocalOrientation: flag = true
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 0, -90 }
+                pass: i16 = 10
+                particleIsLocalOrientation: flag = true
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 0, -90 }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 1.25, 3, 1.25 }
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 1.25, 3, 1.25 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             0.129999995
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 1, 0.5, 1 }
                             { 1, 3, 1 }
                             { 2, 5, 2 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_W_Color-Rampdown.dds"
-                UvRotation: embed = ValueFloat {
-                    ConstantValue: f32 = 90
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_W_Color-Rampdown.dds"
+                uvRotation: embed = ValueFloat {
+                    constantValue: f32 = 90
                 }
-                TextureMult: pointer = 0xb097c1bd {
-                    TextureMult: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_E_Spear_Impact_Diust_burst.dds"
-                    TexAddressModeMult: u8 = 2
-                    UvScrollClampMult: flag = true
-                    BirthUvScrollRateMult: embed = ValueVector2 {
-                        ConstantValue: vec2 = { 1, -10 }
+                textureMult: pointer = VfxTextureMultDefinitionData {
+                    textureMult: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_E_Spear_Impact_Diust_burst.dds"
+                    texAddressModeMult: u8 = 2
+                    uvScrollClampMult: flag = true
+                    birthUvScrollRateMult: embed = ValueVector2 {
+                        constantValue: vec2 = { 1, -10 }
                     }
-                    BirthUvoffsetMult: embed = ValueVector2 {
-                        ConstantValue: vec2 = { 0, 1 }
+                    birthUVOffsetMult: embed = ValueVector2 {
+                        constantValue: vec2 = { 0, 1 }
                     }
                 }
             }
         }
-        ParticleName: string = "Hecarim_Base_E_weapon_buf"
-        ParticlePath: string = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_E_weapon_buf"
-        OverrideScaleCap: option[f32] = {
+        particleName: string = "Hecarim_Base_E_weapon_buf"
+        particlePath: string = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_E_weapon_buf"
+        overrideScaleCap: option[f32] = {
             -1
         }
     }
     "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_I_HeadTrail" = VfxSystemDefinitionData {
-        ComplexEmitterDefinitionData: list[pointer] = {
+        complexEmitterDefinitionData: list[pointer] = {
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 30
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 30
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 1
-                    Dynamics: pointer = VfxAnimatedFloatVariableData {
-                        ProbabilityTables: list[pointer] = {
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 1
+                    dynamics: pointer = VfxAnimatedFloatVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.600000024
                                     1
                                 }
                             }
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[f32] = {
+                        values: list[f32] = {
                             1
                         }
                     }
                 }
-                ParticleLinger: option[f32] = {
+                particleLinger: option[f32] = {
                     1
                 }
-                EmitterName: string = "HeadTrail"
-                Disabled: bool = true
-                BirthVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { -40, 200, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                emitterName: string = "HeadTrail"
+                disabled: bool = true
+                birthVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { -40, 200, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.800000012
                                     1
                                 }
@@ -1741,121 +1741,121 @@ entries: map[hash,embed] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { -40, 200, 0 }
                         }
                     }
                 }
-                BirthDrag: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 4, 0, 0 }
+                birthDrag: embed = ValueVector3 {
+                    constantValue: vec3 = { 4, 0, 0 }
                 }
-                WorldAcceleration: embed = IntegratedValueVector3 {
-                    ConstantValue: vec3 = { 0, -250, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                worldAcceleration: embed = IntegratedValueVector3 {
+                    constantValue: vec3 = { 0, -250, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, -250, 0 }
                         }
                     }
                 }
-                BindWeight: embed = ValueFloat {
-                    ConstantValue: f32 = 1
-                    Dynamics: pointer = VfxAnimatedFloatVariableData {
-                        Times: list[f32] = {
+                bindWeight: embed = ValueFloat {
+                    constantValue: f32 = 1
+                    dynamics: pointer = VfxAnimatedFloatVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[f32] = {
+                        values: list[f32] = {
                             1
                             0
                         }
                     }
                 }
-                0x3bf0b4ed: pointer = 0xee39916f {
-                    EmitOffset: vec3 = { -36, -15, 1.5 }
+                SpawnShape: pointer = 0xee39916f {
+                    emitOffset: vec3 = { -36, -15, 1.5 }
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                EmitterPosition: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                         }
                     }
                 }
-                Primitive: pointer = VfxPrimitiveArbitraryTrail {
+                primitive: pointer = VfxPrimitiveArbitraryTrail {
                     mTrail: embed = VfxTrailDefinitionData {
                         mMode: u8 = 1
                         mCutoff: f32 = 100
                         mBirthTilingSize: embed = ValueVector3 {
-                            ConstantValue: vec3 = { 100, 0, 0 }
+                            constantValue: vec3 = { 100, 0, 0 }
                         }
                         mSmoothingMode: u8 = 1
                     }
                 }
-                ParticleColorTexture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Z_color-trail.dds"
-                BlendMode: u8 = 4
-                Pass: i16 = 100
-                ColorLookUpTypeY: u8 = 3
-                ParticleIsLocalOrientation: flag = true
-                BirthRotationalVelocity0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 0, 100 }
+                particleColorTexture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Z_color-trail.dds"
+                blendMode: u8 = 4
+                pass: i16 = 100
+                colorLookUpTypeY: u8 = 3
+                particleIsLocalOrientation: flag = true
+                birthRotationalVelocity0: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 0, 100 }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 20, 35, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 20, 35, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.5
                                     1
                                 }
                             }
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.5
                                     1
                                 }
                             }
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 20, 35, 0 }
                         }
                     }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             0.200000003
                             0.5
                             0.800000012
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                             { 1, 1, 0 }
                             { 0.5, 0.5, 0 }
@@ -1864,50 +1864,50 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Mis_smoke_Trail.dds"
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Mis_smoke_Trail.dds"
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 15
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 15
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 1.29999995
-                    Dynamics: pointer = VfxAnimatedFloatVariableData {
-                        ProbabilityTables: list[pointer] = {
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 1.29999995
+                    dynamics: pointer = VfxAnimatedFloatVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.5
                                     1
                                 }
                             }
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[f32] = {
+                        values: list[f32] = {
                             1.29999995
                         }
                     }
                 }
-                ParticleLinger: option[f32] = {
+                particleLinger: option[f32] = {
                     1.29999995
                 }
-                EmitterName: string = "Glow"
-                Disabled: bool = true
-                BirthVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 30, 0, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                emitterName: string = "Glow"
+                disabled: bool = true
+                birthVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { 30, 0, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0
                                     1
                                 }
@@ -1915,84 +1915,84 @@ entries: map[hash,embed] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 30, 0, 0 }
                         }
                     }
                 }
-                BirthDrag: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0.300000012, 0.300000012, 0.300000012 }
+                birthDrag: embed = ValueVector3 {
+                    constantValue: vec3 = { 0.300000012, 0.300000012, 0.300000012 }
                 }
-                BirthAcceleration: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 90, 0 }
+                birthAcceleration: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 90, 0 }
                 }
-                BindWeight: embed = ValueFloat {
-                    ConstantValue: f32 = 1
-                    Dynamics: pointer = VfxAnimatedFloatVariableData {
-                        Times: list[f32] = {
+                bindWeight: embed = ValueFloat {
+                    constantValue: f32 = 1
+                    dynamics: pointer = VfxAnimatedFloatVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[f32] = {
+                        values: list[f32] = {
                             1
                             0.699999988
                         }
                     }
                 }
-                0x3bf0b4ed: pointer = 0x4f4e2ed7 {
-                    EmitOffset: embed = ValueVector3 {
-                        ConstantValue: vec3 = { 10, 20, 0 }
-                        Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                            ProbabilityTables: list[pointer] = {
+                SpawnShape: pointer = VfxShapeLegacy {
+                    emitOffset: embed = ValueVector3 {
+                        constantValue: vec3 = { 10, 20, 0 }
+                        dynamics: pointer = VfxAnimatedVector3fVariableData {
+                            probabilityTables: list[pointer] = {
                                 VfxProbabilityTableData {
-                                    KeyTimes: list[f32] = {
+                                    keyTimes: list[f32] = {
                                         0
                                         1
                                     }
-                                    KeyValues: list[f32] = {
+                                    keyValues: list[f32] = {
                                         0
                                         1
                                     }
                                 }
                                 VfxProbabilityTableData {
-                                    KeyTimes: list[f32] = {
+                                    keyTimes: list[f32] = {
                                         0
                                         1
                                     }
-                                    KeyValues: list[f32] = {
+                                    keyValues: list[f32] = {
                                         -0.100000001
                                         1
                                     }
                                 }
                                 VfxProbabilityTableData {}
                             }
-                            Times: list[f32] = {
+                            times: list[f32] = {
                                 0
                             }
-                            Values: list[vec3] = {
+                            values: list[vec3] = {
                                 { 10, 20, 0 }
                             }
                         }
                     }
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    ConstantValue: vec3 = { -45, -10, 1.5 }
+                EmitterPosition: embed = ValueVector3 {
+                    constantValue: vec3 = { -45, -10, 1.5 }
                 }
-                ParticleColorTexture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Z_glow.dds"
-                ColorLookUpTypeY: u8 = 3
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 1, 0, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                particleColorTexture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Z_glow.dds"
+                colorLookUpTypeY: u8 = 3
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 1, 0, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0
                                     360
                                 }
@@ -2000,99 +2000,99 @@ entries: map[hash,embed] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 1, 0, 0 }
                         }
                     }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 55, 55, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 55, 55, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.699999988
                                     1
                                 }
                             }
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.5
                                     1
                                 }
                             }
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 55, 55, 0 }
                         }
                     }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             0.5
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                             { 1, 1, 0 }
                             { 0.300000012, 0.300000012, 0 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Z_CastLight.dds"
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Z_CastLight.dds"
             }
             VfxEmitterDefinitionData {
-                TimeBeforeFirstEmission: f32 = 0.100000001
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                timeBeforeFirstEmission: f32 = 0.100000001
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 0.449999988
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 0.449999988
                 }
-                Lifetime: option[f32] = {
+                lifetime: option[f32] = {
                     1
                 }
-                IsSingleParticle: flag = true
-                EmitterName: string = "WeaponStreak"
-                Disabled: bool = true
-                0x3bf0b4ed: pointer = 0xee39916f {
-                    EmitOffset: vec3 = { 220, 160, 220 }
+                isSingleParticle: flag = true
+                emitterName: string = "WeaponStreak"
+                disabled: bool = true
+                SpawnShape: pointer = 0xee39916f {
+                    emitOffset: vec3 = { 220, 160, 220 }
                 }
-                Primitive: pointer = VfxPrimitiveMesh {
+                primitive: pointer = VfxPrimitiveMesh {
                     mMesh: embed = VfxMeshDefinitionData {
                         mSimpleMeshName: string = "ASSETS/Characters/Thresh/Skins/Base/Particles/Thresh_Base_ba2_torus.scb"
                     }
                 }
-                BlendMode: u8 = 1
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 0.345098048, 0.176470593, 0.145098045, 1 }
+                blendMode: u8 = 1
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 0.345098048, 0.176470593, 0.145098045, 1 }
                 }
-                Color: embed = ValueColor {
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.449963212
                             0.7999264
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 1, 1, 1 }
                             { 1, 1, 1, 0.816640019 }
                             { 1, 1, 1, 0.288321167 }
@@ -2100,54 +2100,54 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                AlphaRef: u8 = 0
-                DisableBackfaceCull: bool = true
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 180, -25, 70 }
+                alphaRef: u8 = 0
+                disableBackfaceCull: bool = true
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 180, -25, 70 }
                 }
-                Texture: string = "ASSETS/Characters/Thresh/Skins/Base/Particles/Thresh_Base_smoke_trail_mult.dds"
-                BirthUvoffset: embed = ValueVector2 {
-                    ConstantValue: vec2 = { 0.5, 0 }
+                texture: string = "ASSETS/Characters/Thresh/Skins/Base/Particles/Thresh_Base_smoke_trail_mult.dds"
+                birthUVOffset: embed = ValueVector2 {
+                    constantValue: vec2 = { 0.5, 0 }
                 }
-                TexAddressModeBase: u8 = 2
-                ParticleUvScrollRate: embed = IntegratedValueVector2 {
-                    ConstantValue: vec2 = { -3.5, 0 }
-                    Dynamics: pointer = VfxAnimatedVector2fVariableData {
-                        Times: list[f32] = {
+                texAddressModeBase: u8 = 2
+                particleUVScrollRate: embed = IntegratedValueVector2 {
+                    constantValue: vec2 = { -3.5, 0 }
+                    dynamics: pointer = VfxAnimatedVector2fVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[vec2] = {
+                        values: list[vec2] = {
                             { -3.5, 0 }
                             { 0, 0 }
                         }
                     }
                 }
-                UvScale: embed = ValueVector2 {
-                    Dynamics: pointer = VfxAnimatedVector2fVariableData {
-                        Times: list[f32] = {
+                uvScale: embed = ValueVector2 {
+                    dynamics: pointer = VfxAnimatedVector2fVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[vec2] = {
+                        values: list[vec2] = {
                             { 0, 4 }
                             { 1, 1 }
                         }
                     }
                 }
-                TextureMult: pointer = 0xb097c1bd {
-                    TextureMult: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Mis_smoke_Trail.dds"
-                    TexAddressModeMult: u8 = 2
-                    UvScaleMult: embed = ValueVector2 {
-                        ConstantValue: vec2 = { 2, 2 }
-                        Dynamics: pointer = VfxAnimatedVector2fVariableData {
-                            Times: list[f32] = {
+                textureMult: pointer = VfxTextureMultDefinitionData {
+                    textureMult: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Mis_smoke_Trail.dds"
+                    texAddressModeMult: u8 = 2
+                    uvScaleMult: embed = ValueVector2 {
+                        constantValue: vec2 = { 2, 2 }
+                        dynamics: pointer = VfxAnimatedVector2fVariableData {
+                            times: list[f32] = {
                                 0
                                 0.21192053
                                 0.584253132
                                 1
                             }
-                            Values: list[vec2] = {
+                            values: list[vec2] = {
                                 { 2, 8 }
                                 { 2.05479455, 3.94896555 }
                                 { 2.02890658, 1.86301374 }
@@ -2155,16 +2155,16 @@ entries: map[hash,embed] = {
                             }
                         }
                     }
-                    0x22c3cf3e: embed = IntegratedValueVector2 {
-                        ConstantValue: vec2 = { -1, 0 }
-                        Dynamics: pointer = VfxAnimatedVector2fVariableData {
-                            Times: list[f32] = {
+                    ParticleIntegratedUvScrollMult: embed = IntegratedValueVector2 {
+                        constantValue: vec2 = { -1, 0 }
+                        dynamics: pointer = VfxAnimatedVector2fVariableData {
+                            times: list[f32] = {
                                 0
                                 0.170713767
                                 0.473877847
                                 1
                             }
-                            Values: list[vec2] = {
+                            values: list[vec2] = {
                                 { -1, 0 }
                                 { -0.388698637, 0 }
                                 { -0.200000003, 0 }
@@ -2172,26 +2172,26 @@ entries: map[hash,embed] = {
                             }
                         }
                     }
-                    BirthUvoffsetMult: embed = ValueVector2 {
-                        ConstantValue: vec2 = { 1, 0 }
-                        Dynamics: pointer = VfxAnimatedVector2fVariableData {
-                            ProbabilityTables: list[pointer] = {
+                    birthUVOffsetMult: embed = ValueVector2 {
+                        constantValue: vec2 = { 1, 0 }
+                        dynamics: pointer = VfxAnimatedVector2fVariableData {
+                            probabilityTables: list[pointer] = {
                                 VfxProbabilityTableData {
-                                    KeyTimes: list[f32] = {
+                                    keyTimes: list[f32] = {
                                         0
                                         1
                                     }
-                                    KeyValues: list[f32] = {
+                                    keyValues: list[f32] = {
                                         -1
                                         1
                                     }
                                 }
                                 VfxProbabilityTableData {}
                             }
-                            Times: list[f32] = {
+                            times: list[f32] = {
                                 0
                             }
-                            Values: list[vec2] = {
+                            values: list[vec2] = {
                                 { 1, 0 }
                             }
                         }
@@ -2199,47 +2199,47 @@ entries: map[hash,embed] = {
                 }
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 30
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 30
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 1
-                    Dynamics: pointer = VfxAnimatedFloatVariableData {
-                        ProbabilityTables: list[pointer] = {
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 1
+                    dynamics: pointer = VfxAnimatedFloatVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.600000024
                                     1
                                 }
                             }
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[f32] = {
+                        values: list[f32] = {
                             1
                         }
                     }
                 }
-                ParticleLinger: option[f32] = {
+                particleLinger: option[f32] = {
                     1
                 }
-                EmitterName: string = "HeadTrail1"
-                Disabled: bool = true
-                BirthVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { -40, 200, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                emitterName: string = "HeadTrail1"
+                disabled: bool = true
+                birthVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { -40, 200, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.800000012
                                     1
                                 }
@@ -2247,105 +2247,105 @@ entries: map[hash,embed] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { -40, 200, 0 }
                         }
                     }
                 }
-                BirthDrag: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 4, 0, 0 }
+                birthDrag: embed = ValueVector3 {
+                    constantValue: vec3 = { 4, 0, 0 }
                 }
-                WorldAcceleration: embed = IntegratedValueVector3 {
-                    ConstantValue: vec3 = { 0, -250, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                worldAcceleration: embed = IntegratedValueVector3 {
+                    constantValue: vec3 = { 0, -250, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, -250, 0 }
                         }
                     }
                 }
-                BindWeight: embed = ValueFloat {
-                    ConstantValue: f32 = 1
-                    Dynamics: pointer = VfxAnimatedFloatVariableData {
-                        Times: list[f32] = {
+                bindWeight: embed = ValueFloat {
+                    constantValue: f32 = 1
+                    dynamics: pointer = VfxAnimatedFloatVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[f32] = {
+                        values: list[f32] = {
                             1
                             0
                         }
                     }
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    ConstantValue: vec3 = { -36, -15, 1.5 }
+                EmitterPosition: embed = ValueVector3 {
+                    constantValue: vec3 = { -36, -15, 1.5 }
                 }
-                Primitive: pointer = VfxPrimitiveArbitraryTrail {
+                primitive: pointer = VfxPrimitiveArbitraryTrail {
                     mTrail: embed = VfxTrailDefinitionData {
                         mMode: u8 = 1
                         mCutoff: f32 = 100
                         mBirthTilingSize: embed = ValueVector3 {
-                            ConstantValue: vec3 = { 15, 15, 0 }
+                            constantValue: vec3 = { 15, 15, 0 }
                         }
                     }
                 }
-                ParticleColorTexture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Z_color-trail.dds"
-                BlendMode: u8 = 4
-                Pass: i16 = 100
-                ColorLookUpTypeY: u8 = 3
-                ParticleIsLocalOrientation: flag = true
-                BirthRotationalVelocity0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 0, 100 }
+                particleColorTexture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Z_color-trail.dds"
+                blendMode: u8 = 4
+                pass: i16 = 100
+                colorLookUpTypeY: u8 = 3
+                particleIsLocalOrientation: flag = true
+                birthRotationalVelocity0: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 0, 100 }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 20, 35, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 20, 35, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.5
                                     1
                                 }
                             }
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.5
                                     1
                                 }
                             }
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 20, 35, 0 }
                         }
                     }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             0.200000003
                             0.5
                             0.800000012
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                             { 1, 1, 0 }
                             { 0.5, 0.5, 0 }
@@ -2354,49 +2354,49 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Skin07/Particles/Hecarim_Base_Z_firemane.dds"
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Skin07/Particles/Hecarim_Base_Z_firemane.dds"
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 100
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 100
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 0.400000006
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 0.400000006
                 }
-                ParticleLingerType: u8 = 1
-                ParticleLinger: option[f32] = {
+                particleLingerType: u8 = 1
+                particleLinger: option[f32] = {
                     0.75
                 }
-                EmitterLinger: option[f32] = {
+                emitterLinger: option[f32] = {
                     1
                 }
-                EmitterName: string = "Bloom"
-                Importance: u8 = 2
-                BirthVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 600, 0 }
+                emitterName: string = "Bloom"
+                importance: u8 = 2
+                birthVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 600, 0 }
                 }
-                WorldAcceleration: embed = IntegratedValueVector3 {
-                    ConstantValue: vec3 = { 0, -3400, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                worldAcceleration: embed = IntegratedValueVector3 {
+                    constantValue: vec3 = { 0, -3400, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, -3400, 0 }
                         }
                     }
                 }
-                0xb929b43e: pointer = 0x9b19f2b5 {
-                    0x37cc678f: flag = true
-                    0x4dbd1600: embed = ValueVector3 {
-                        ConstantValue: vec3 = { 4, 3, 3 }
-                        Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                            Times: list[f32] = {
+                Linger: pointer = VfxLingerDefinitionData {
+                    UseKeyedLingerDrag: flag = true
+                    KeyedLingerDrag: embed = ValueVector3 {
+                        constantValue: vec3 = { 4, 3, 3 }
+                        dynamics: pointer = VfxAnimatedVector3fVariableData {
+                            times: list[f32] = {
                                 0
                                 0.5
                                 1
                             }
-                            Values: list[vec3] = {
+                            values: list[vec3] = {
                                 { 8, 0, 0 }
                                 { 12, 3, 3 }
                                 { 16, 0, 0 }
@@ -2404,46 +2404,46 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                0x3bf0b4ed: pointer = 0xee39916f {
-                    EmitOffset: vec3 = { -36, -15, 1.5 }
+                SpawnShape: pointer = 0xee39916f {
+                    emitOffset: vec3 = { -36, -15, 1.5 }
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                EmitterPosition: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                         }
                     }
                 }
-                Primitive: pointer = VfxPrimitiveArbitraryTrail {
+                primitive: pointer = VfxPrimitiveArbitraryTrail {
                     mTrail: embed = VfxTrailDefinitionData {
                         mCutoff: f32 = 300
                         mBirthTilingSize: embed = ValueVector3 {
-                            ConstantValue: vec3 = { 300, 0, 0 }
+                            constantValue: vec3 = { 300, 0, 0 }
                         }
                         mSmoothingMode: u8 = 1
                     }
                 }
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 1, 0.513725519, 0.525490224, 0.25999999 }
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 1, 0.513725519, 0.525490224, 0.25999999 }
                 }
-                Color: embed = ValueColor {
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.200000003
                             0.300000012
                             0.785000026
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 0.827450991, 0.792156875, 0 }
                             { 0.807843149, 0.474509805, 0.333333343, 1 }
                             { 1, 0.482352942, 0.262745112, 1 }
@@ -2452,16 +2452,16 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Pass: i16 = -5
-                AlphaErosionDefinition: pointer = VfxAlphaErosionDefinitionData {
-                    ErosionDriveCurve: embed = ValueFloat {
-                        Dynamics: pointer = VfxAnimatedFloatVariableData {
-                            Times: list[f32] = {
+                pass: i16 = -5
+                alphaErosionDefinition: pointer = VfxAlphaErosionDefinitionData {
+                    erosionDriveCurve: embed = ValueFloat {
+                        dynamics: pointer = VfxAnimatedFloatVariableData {
+                            times: list[f32] = {
                                 0
                                 0.5
                                 1
                             }
-                            Values: list[f32] = {
+                            values: list[f32] = {
                                 0
                                 0
                                 0.200000003
@@ -2470,85 +2470,85 @@ entries: map[hash,embed] = {
                     }
                     UseLingerErosionDriveCurve: bool = true
                     LingerErosionDriveCurve: embed = ValueFloat {
-                        Dynamics: pointer = VfxAnimatedFloatVariableData {
-                            Times: list[f32] = {
+                        dynamics: pointer = VfxAnimatedFloatVariableData {
+                            times: list[f32] = {
                                 0
                                 1
                             }
-                            Values: list[f32] = {
+                            values: list[f32] = {
                                 0
                                 2
                             }
                         }
                     }
-                    ErosionMapName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Cosmic_Mult.dds"
+                    erosionMapName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Cosmic_Mult.dds"
                 }
-                DepthBiasFactors: vec2 = { -1, -16 }
-                ParticleIsLocalOrientation: flag = true
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 90, 0 }
+                depthBiasFactors: vec2 = { -1, -16 }
+                particleIsLocalOrientation: flag = true
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 90, 0 }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 30, 0, 0 }
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 30, 0, 0 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 1, 0, 0 }
                             { 2, 0, 0 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Trail_Normal.dds"
-                TextureMult: pointer = 0xb097c1bd {
-                    TextureMult: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Cosmic_Mult.dds"
-                    BirthUvScrollRateMult: embed = ValueVector2 {
-                        ConstantValue: vec2 = { -1, 0 }
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Trail_Normal.dds"
+                textureMult: pointer = VfxTextureMultDefinitionData {
+                    textureMult: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Cosmic_Mult.dds"
+                    birthUvScrollRateMult: embed = ValueVector2 {
+                        constantValue: vec2 = { -1, 0 }
                     }
                 }
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 100
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 100
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 0.200000003
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 0.200000003
                 }
-                ParticleLingerType: u8 = 1
-                ParticleLinger: option[f32] = {
+                particleLingerType: u8 = 1
+                particleLinger: option[f32] = {
                     0.5
                 }
-                EmitterName: string = "Dark_underlayer_"
-                Importance: u8 = 2
-                BirthVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 900, 0 }
+                emitterName: string = "Dark_underlayer_"
+                importance: u8 = 2
+                birthVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 900, 0 }
                 }
-                WorldAcceleration: embed = IntegratedValueVector3 {
-                    ConstantValue: vec3 = { 0, -3400, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                worldAcceleration: embed = IntegratedValueVector3 {
+                    constantValue: vec3 = { 0, -3400, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, -3400, 0 }
                         }
                     }
                 }
-                0xb929b43e: pointer = 0x9b19f2b5 {
-                    0x37cc678f: flag = true
-                    0x4dbd1600: embed = ValueVector3 {
-                        ConstantValue: vec3 = { 4, 3, 3 }
-                        Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                            Times: list[f32] = {
+                Linger: pointer = VfxLingerDefinitionData {
+                    UseKeyedLingerDrag: flag = true
+                    KeyedLingerDrag: embed = ValueVector3 {
+                        constantValue: vec3 = { 4, 3, 3 }
+                        dynamics: pointer = VfxAnimatedVector3fVariableData {
+                            times: list[f32] = {
                                 0
                                 0.5
                                 1
                             }
-                            Values: list[vec3] = {
+                            values: list[vec3] = {
                                 { 8, 0, 0 }
                                 { 12, 3, 3 }
                                 { 16, 0, 0 }
@@ -2556,47 +2556,47 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                0x3bf0b4ed: pointer = 0xee39916f {
-                    EmitOffset: vec3 = { -36, -15, 1.5 }
+                SpawnShape: pointer = 0xee39916f {
+                    emitOffset: vec3 = { -36, -15, 1.5 }
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                EmitterPosition: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                         }
                     }
                 }
-                Primitive: pointer = VfxPrimitiveArbitraryTrail {
+                primitive: pointer = VfxPrimitiveArbitraryTrail {
                     mTrail: embed = VfxTrailDefinitionData {
                         mCutoff: f32 = 300
                         mBirthTilingSize: embed = ValueVector3 {
-                            ConstantValue: vec3 = { 600, 0, 0 }
+                            constantValue: vec3 = { 600, 0, 0 }
                         }
                         mSmoothingMode: u8 = 1
                     }
                 }
-                BlendMode: u8 = 1
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 0.0196078438, 0.188235298, 0.337254912, 1 }
+                blendMode: u8 = 1
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 0.0196078438, 0.188235298, 0.337254912, 1 }
                 }
-                Color: embed = ValueColor {
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.200000003
                             0.300000012
                             0.400000006
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 0.894117653, 0.454901963, 0 }
                             { 0.530006886, 0.500007629, 0.250003815, 1 }
                             { 1, 0.269993126, 0.0500038154, 1 }
@@ -2605,16 +2605,16 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Pass: i16 = -2
-                AlphaErosionDefinition: pointer = VfxAlphaErosionDefinitionData {
-                    ErosionDriveCurve: embed = ValueFloat {
-                        Dynamics: pointer = VfxAnimatedFloatVariableData {
-                            Times: list[f32] = {
+                pass: i16 = -2
+                alphaErosionDefinition: pointer = VfxAlphaErosionDefinitionData {
+                    erosionDriveCurve: embed = ValueFloat {
+                        dynamics: pointer = VfxAnimatedFloatVariableData {
+                            times: list[f32] = {
                                 0
                                 0.5
                                 1
                             }
-                            Values: list[f32] = {
+                            values: list[f32] = {
                                 0
                                 0
                                 0.200000003
@@ -2623,81 +2623,81 @@ entries: map[hash,embed] = {
                     }
                     UseLingerErosionDriveCurve: bool = true
                     LingerErosionDriveCurve: embed = ValueFloat {
-                        Dynamics: pointer = VfxAnimatedFloatVariableData {
-                            Times: list[f32] = {
+                        dynamics: pointer = VfxAnimatedFloatVariableData {
+                            times: list[f32] = {
                                 0
                                 1
                             }
-                            Values: list[f32] = {
+                            values: list[f32] = {
                                 0
                                 2
                             }
                         }
                     }
-                    ErosionFeatherOut: f32 = 0.0500000007
-                    ErosionMapName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Cosmic_Mult.dds"
+                    erosionFeatherOut: f32 = 0.0500000007
+                    erosionMapName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Cosmic_Mult.dds"
                 }
-                DepthBiasFactors: vec2 = { -1, -16 }
-                ParticleIsLocalOrientation: flag = true
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 90, 0 }
+                depthBiasFactors: vec2 = { -1, -16 }
+                particleIsLocalOrientation: flag = true
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 90, 0 }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 30, 0, 0 }
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 30, 0, 0 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 1, 0, 0 }
                             { 2, 0, 0 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Mis_smoke_Trail.dds"
-                EmitterUvScrollRate: vec2 = { -0.5, 0 }
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Mis_smoke_Trail.dds"
+                emitterUvScrollRate: vec2 = { -0.5, 0 }
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 100
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 100
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 0.300000012
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 0.300000012
                 }
-                ParticleLingerType: u8 = 1
-                ParticleLinger: option[f32] = {
+                particleLingerType: u8 = 1
+                particleLinger: option[f32] = {
                     0.5
                 }
-                EmitterName: string = "Dark_underlayer_1"
-                Importance: u8 = 2
-                BirthVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 700, 0 }
+                emitterName: string = "Dark_underlayer_1"
+                importance: u8 = 2
+                birthVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 700, 0 }
                 }
-                WorldAcceleration: embed = IntegratedValueVector3 {
-                    ConstantValue: vec3 = { 0, -3400, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                worldAcceleration: embed = IntegratedValueVector3 {
+                    constantValue: vec3 = { 0, -3400, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, -3400, 0 }
                         }
                     }
                 }
-                0xb929b43e: pointer = 0x9b19f2b5 {
-                    0x37cc678f: flag = true
-                    0x4dbd1600: embed = ValueVector3 {
-                        ConstantValue: vec3 = { 4, 3, 3 }
-                        Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                            Times: list[f32] = {
+                Linger: pointer = VfxLingerDefinitionData {
+                    UseKeyedLingerDrag: flag = true
+                    KeyedLingerDrag: embed = ValueVector3 {
+                        constantValue: vec3 = { 4, 3, 3 }
+                        dynamics: pointer = VfxAnimatedVector3fVariableData {
+                            times: list[f32] = {
                                 0
                                 0.5
                                 1
                             }
-                            Values: list[vec3] = {
+                            values: list[vec3] = {
                                 { 8, 0, 0 }
                                 { 12, 3, 3 }
                                 { 16, 0, 0 }
@@ -2705,47 +2705,47 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                0x3bf0b4ed: pointer = 0xee39916f {
-                    EmitOffset: vec3 = { -36, -15, 1.5 }
+                SpawnShape: pointer = 0xee39916f {
+                    emitOffset: vec3 = { -36, -15, 1.5 }
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                EmitterPosition: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                         }
                     }
                 }
-                Primitive: pointer = VfxPrimitiveArbitraryTrail {
+                primitive: pointer = VfxPrimitiveArbitraryTrail {
                     mTrail: embed = VfxTrailDefinitionData {
                         mCutoff: f32 = 300
                         mBirthTilingSize: embed = ValueVector3 {
-                            ConstantValue: vec3 = { 150, 0, 0 }
+                            constantValue: vec3 = { 150, 0, 0 }
                         }
                         mSmoothingMode: u8 = 1
                     }
                 }
-                BlendMode: u8 = 4
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 1, 0.494117647, 0.509803951, 1 }
+                blendMode: u8 = 4
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 1, 0.494117647, 0.509803951, 1 }
                 }
-                Color: embed = ValueColor {
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.200000003
                             0.300000012
                             0.400000006
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 0.827450991, 0.792156875, 0 }
                             { 0.807843149, 0.474509805, 0.333333343, 1 }
                             { 1, 0.482352942, 0.262745112, 1 }
@@ -2754,16 +2754,16 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Pass: i16 = 2
-                AlphaErosionDefinition: pointer = VfxAlphaErosionDefinitionData {
-                    ErosionDriveCurve: embed = ValueFloat {
-                        Dynamics: pointer = VfxAnimatedFloatVariableData {
-                            Times: list[f32] = {
+                pass: i16 = 2
+                alphaErosionDefinition: pointer = VfxAlphaErosionDefinitionData {
+                    erosionDriveCurve: embed = ValueFloat {
+                        dynamics: pointer = VfxAnimatedFloatVariableData {
+                            times: list[f32] = {
                                 0
                                 0.5
                                 1
                             }
-                            Values: list[f32] = {
+                            values: list[f32] = {
                                 0
                                 0
                                 0.200000003
@@ -2772,80 +2772,80 @@ entries: map[hash,embed] = {
                     }
                     UseLingerErosionDriveCurve: bool = true
                     LingerErosionDriveCurve: embed = ValueFloat {
-                        Dynamics: pointer = VfxAnimatedFloatVariableData {
-                            Times: list[f32] = {
+                        dynamics: pointer = VfxAnimatedFloatVariableData {
+                            times: list[f32] = {
                                 0
                                 1
                             }
-                            Values: list[f32] = {
+                            values: list[f32] = {
                                 0
                                 2
                             }
                         }
                     }
-                    ErosionMapName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Cosmic_Mult.dds"
+                    erosionMapName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Cosmic_Mult.dds"
                 }
-                DepthBiasFactors: vec2 = { -1, -16 }
-                ParticleIsLocalOrientation: flag = true
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 90, 0 }
+                depthBiasFactors: vec2 = { -1, -16 }
+                particleIsLocalOrientation: flag = true
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 90, 0 }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 20, 0, 0 }
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 20, 0, 0 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 1, 0, 0 }
                             { 1, 0, 0 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Mis_Cosmic_Trail.dds"
-                EmitterUvScrollRate: vec2 = { -1, 0 }
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Mis_Cosmic_Trail.dds"
+                emitterUvScrollRate: vec2 = { -1, 0 }
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 100
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 100
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 0.180000007
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 0.180000007
                 }
-                ParticleLingerType: u8 = 1
-                ParticleLinger: option[f32] = {
+                particleLingerType: u8 = 1
+                particleLinger: option[f32] = {
                     0.5
                 }
-                EmitterName: string = "Dark_underlayer_2"
-                Importance: u8 = 2
-                BirthVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 900, 0 }
+                emitterName: string = "Dark_underlayer_2"
+                importance: u8 = 2
+                birthVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 900, 0 }
                 }
-                WorldAcceleration: embed = IntegratedValueVector3 {
-                    ConstantValue: vec3 = { 0, -3400, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                worldAcceleration: embed = IntegratedValueVector3 {
+                    constantValue: vec3 = { 0, -3400, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, -3400, 0 }
                         }
                     }
                 }
-                0xb929b43e: pointer = 0x9b19f2b5 {
-                    0x37cc678f: flag = true
-                    0x4dbd1600: embed = ValueVector3 {
-                        ConstantValue: vec3 = { 4, 3, 3 }
-                        Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                            Times: list[f32] = {
+                Linger: pointer = VfxLingerDefinitionData {
+                    UseKeyedLingerDrag: flag = true
+                    KeyedLingerDrag: embed = ValueVector3 {
+                        constantValue: vec3 = { 4, 3, 3 }
+                        dynamics: pointer = VfxAnimatedVector3fVariableData {
+                            times: list[f32] = {
                                 0
                                 0.5
                                 1
                             }
-                            Values: list[vec3] = {
+                            values: list[vec3] = {
                                 { 8, 0, 0 }
                                 { 12, 3, 3 }
                                 { 16, 0, 0 }
@@ -2853,47 +2853,47 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                0x3bf0b4ed: pointer = 0xee39916f {
-                    EmitOffset: vec3 = { -36, -15, 1.5 }
+                SpawnShape: pointer = 0xee39916f {
+                    emitOffset: vec3 = { -36, -15, 1.5 }
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                EmitterPosition: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                         }
                     }
                 }
-                Primitive: pointer = VfxPrimitiveArbitraryTrail {
+                primitive: pointer = VfxPrimitiveArbitraryTrail {
                     mTrail: embed = VfxTrailDefinitionData {
                         mCutoff: f32 = 300
                         mBirthTilingSize: embed = ValueVector3 {
-                            ConstantValue: vec3 = { 150, 0, 0 }
+                            constantValue: vec3 = { 150, 0, 0 }
                         }
                         mSmoothingMode: u8 = 1
                     }
                 }
-                BlendMode: u8 = 1
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 0.454901963, 0.176470593, 0.145098045, 1 }
+                blendMode: u8 = 1
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 0.454901963, 0.176470593, 0.145098045, 1 }
                 }
-                Color: embed = ValueColor {
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.200000003
                             0.300000012
                             0.400000006
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 0.827450991, 0.792156875, 0 }
                             { 0.807843149, 0.474509805, 0.333333343, 1 }
                             { 1, 0.482352942, 0.262745112, 1 }
@@ -2902,16 +2902,16 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Pass: i16 = -2
-                AlphaErosionDefinition: pointer = VfxAlphaErosionDefinitionData {
-                    ErosionDriveCurve: embed = ValueFloat {
-                        Dynamics: pointer = VfxAnimatedFloatVariableData {
-                            Times: list[f32] = {
+                pass: i16 = -2
+                alphaErosionDefinition: pointer = VfxAlphaErosionDefinitionData {
+                    erosionDriveCurve: embed = ValueFloat {
+                        dynamics: pointer = VfxAnimatedFloatVariableData {
+                            times: list[f32] = {
                                 0
                                 0.5
                                 1
                             }
-                            Values: list[f32] = {
+                            values: list[f32] = {
                                 0
                                 0
                                 0.200000003
@@ -2920,80 +2920,80 @@ entries: map[hash,embed] = {
                     }
                     UseLingerErosionDriveCurve: bool = true
                     LingerErosionDriveCurve: embed = ValueFloat {
-                        Dynamics: pointer = VfxAnimatedFloatVariableData {
-                            Times: list[f32] = {
+                        dynamics: pointer = VfxAnimatedFloatVariableData {
+                            times: list[f32] = {
                                 0
                                 1
                             }
-                            Values: list[f32] = {
+                            values: list[f32] = {
                                 0
                                 2
                             }
                         }
                     }
-                    ErosionMapName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Cosmic_Mult.dds"
+                    erosionMapName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Cosmic_Mult.dds"
                 }
-                DepthBiasFactors: vec2 = { -1, -16 }
-                ParticleIsLocalOrientation: flag = true
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 90, 0 }
+                depthBiasFactors: vec2 = { -1, -16 }
+                particleIsLocalOrientation: flag = true
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 90, 0 }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 40, 0, 0 }
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 40, 0, 0 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 1, 0, 0 }
                             { 1, 0, 0 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Mis_Cosmic_Trail.dds"
-                EmitterUvScrollRate: vec2 = { -2, 0 }
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Mis_Cosmic_Trail.dds"
+                emitterUvScrollRate: vec2 = { -2, 0 }
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 100
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 100
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 0.300000012
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 0.300000012
                 }
-                ParticleLingerType: u8 = 1
-                ParticleLinger: option[f32] = {
+                particleLingerType: u8 = 1
+                particleLinger: option[f32] = {
                     0.5
                 }
-                EmitterName: string = "Dark_underlayer_3"
-                Importance: u8 = 2
-                BirthVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 900, 0 }
+                emitterName: string = "Dark_underlayer_3"
+                importance: u8 = 2
+                birthVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 900, 0 }
                 }
-                WorldAcceleration: embed = IntegratedValueVector3 {
-                    ConstantValue: vec3 = { 0, -3400, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                worldAcceleration: embed = IntegratedValueVector3 {
+                    constantValue: vec3 = { 0, -3400, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, -3400, 0 }
                         }
                     }
                 }
-                0xb929b43e: pointer = 0x9b19f2b5 {
-                    0x37cc678f: flag = true
-                    0x4dbd1600: embed = ValueVector3 {
-                        ConstantValue: vec3 = { 4, 3, 3 }
-                        Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                            Times: list[f32] = {
+                Linger: pointer = VfxLingerDefinitionData {
+                    UseKeyedLingerDrag: flag = true
+                    KeyedLingerDrag: embed = ValueVector3 {
+                        constantValue: vec3 = { 4, 3, 3 }
+                        dynamics: pointer = VfxAnimatedVector3fVariableData {
+                            times: list[f32] = {
                                 0
                                 0.5
                                 1
                             }
-                            Values: list[vec3] = {
+                            values: list[vec3] = {
                                 { 8, 0, 0 }
                                 { 12, 3, 3 }
                                 { 16, 0, 0 }
@@ -3001,47 +3001,47 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                0x3bf0b4ed: pointer = 0xee39916f {
-                    EmitOffset: vec3 = { -36, -15, 1.5 }
+                SpawnShape: pointer = 0xee39916f {
+                    emitOffset: vec3 = { -36, -15, 1.5 }
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                EmitterPosition: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                         }
                     }
                 }
-                Primitive: pointer = VfxPrimitiveArbitraryTrail {
+                primitive: pointer = VfxPrimitiveArbitraryTrail {
                     mTrail: embed = VfxTrailDefinitionData {
                         mCutoff: f32 = 300
                         mBirthTilingSize: embed = ValueVector3 {
-                            ConstantValue: vec3 = { 900, 0, 0 }
+                            constantValue: vec3 = { 900, 0, 0 }
                         }
                         mSmoothingMode: u8 = 1
                     }
                 }
-                BlendMode: u8 = 4
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 1, 0.647058845, 0.411764711, 1 }
+                blendMode: u8 = 4
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 1, 0.647058845, 0.411764711, 1 }
                 }
-                Color: embed = ValueColor {
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.200000003
                             0.300000012
                             0.400000006
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 0.827450991, 0.792156875, 0 }
                             { 0.807843149, 0.474509805, 0.333333343, 1 }
                             { 1, 0.482352942, 0.262745112, 1 }
@@ -3050,16 +3050,16 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Pass: i16 = 4
-                AlphaErosionDefinition: pointer = VfxAlphaErosionDefinitionData {
-                    ErosionDriveCurve: embed = ValueFloat {
-                        Dynamics: pointer = VfxAnimatedFloatVariableData {
-                            Times: list[f32] = {
+                pass: i16 = 4
+                alphaErosionDefinition: pointer = VfxAlphaErosionDefinitionData {
+                    erosionDriveCurve: embed = ValueFloat {
+                        dynamics: pointer = VfxAnimatedFloatVariableData {
+                            times: list[f32] = {
                                 0
                                 0.5
                                 1
                             }
-                            Values: list[f32] = {
+                            values: list[f32] = {
                                 0
                                 0
                                 0.200000003
@@ -3068,88 +3068,88 @@ entries: map[hash,embed] = {
                     }
                     UseLingerErosionDriveCurve: bool = true
                     LingerErosionDriveCurve: embed = ValueFloat {
-                        Dynamics: pointer = VfxAnimatedFloatVariableData {
-                            Times: list[f32] = {
+                        dynamics: pointer = VfxAnimatedFloatVariableData {
+                            times: list[f32] = {
                                 0
                                 1
                             }
-                            Values: list[f32] = {
+                            values: list[f32] = {
                                 0
                                 2
                             }
                         }
                     }
-                    ErosionFeatherOut: f32 = 0.0500000007
-                    ErosionMapName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Cosmic_Mult.dds"
+                    erosionFeatherOut: f32 = 0.0500000007
+                    erosionMapName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Cosmic_Mult.dds"
                 }
-                DepthBiasFactors: vec2 = { -1, -16 }
-                ParticleIsLocalOrientation: flag = true
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 90, 0 }
+                depthBiasFactors: vec2 = { -1, -16 }
+                particleIsLocalOrientation: flag = true
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 90, 0 }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 10, 0, 0 }
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 10, 0, 0 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 1, 0, 0 }
                             { 2, 0, 0 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Mis_smoke_Trail.dds"
-                EmitterUvScrollRate: vec2 = { -1, 0 }
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_Mis_smoke_Trail.dds"
+                emitterUvScrollRate: vec2 = { -1, 0 }
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 2
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 2
                 }
-                ParticleLinger: option[f32] = {
+                particleLinger: option[f32] = {
                     12
                 }
-                EmitterName: string = "Temp_GroundGlow"
-                BindWeight: embed = ValueFloat {
-                    ConstantValue: f32 = 1
+                emitterName: string = "Temp_GroundGlow"
+                bindWeight: embed = ValueFloat {
+                    constantValue: f32 = 1
                 }
-                0x3bf0b4ed: pointer = 0xee39916f {
-                    EmitOffset: vec3 = { -36, 15, 1.5 }
+                SpawnShape: pointer = 0xee39916f {
+                    emitOffset: vec3 = { -36, 15, 1.5 }
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                EmitterPosition: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                         }
                     }
                 }
-                BlendMode: u8 = 4
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 1, 0.611764729, 0.470588237, 0.189999998 }
+                blendMode: u8 = 4
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 1, 0.611764729, 0.470588237, 0.189999998 }
                 }
-                Color: embed = ValueColor {
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.300000012
                             0.75
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 1, 1, 0 }
                             { 1, 1, 1, 0.250003815 }
                             { 0.564705908, 0.470588237, 0.13333334, 1 }
@@ -3157,191 +3157,191 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                MiscRenderFlags: u8 = 1
-                ParticleIsLocalOrientation: flag = true
-                IsUniformScale: flag = true
-                BirthRotation0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 1, 1, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                miscRenderFlags: u8 = 1
+                particleIsLocalOrientation: flag = true
+                isUniformScale: flag = true
+                birthRotation0: embed = ValueVector3 {
+                    constantValue: vec3 = { 1, 1, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     90
                                 }
                             }
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     1
                                     360
                                 }
                             }
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 1, 1, 0 }
                         }
                     }
                 }
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 80, 150, 50 }
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 80, 150, 50 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0.5, 0.5, 0 }
                             { 1, 1, 1 }
                         }
                     }
                 }
-                Texture: string = "ASSETS/Shared/Particles/bigglow02.StrawberryRebuild.dds"
+                texture: string = "ASSETS/Shared/Particles/bigglow02.StrawberryRebuild.dds"
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 10
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 10
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 0.5
-                    Dynamics: pointer = VfxAnimatedFloatVariableData {
-                        ProbabilityTables: list[pointer] = {
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 0.5
+                    dynamics: pointer = VfxAnimatedFloatVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     1
                                     1.25
                                 }
                             }
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[f32] = {
+                        values: list[f32] = {
                             0.5
                         }
                     }
                 }
-                ParticleLinger: option[f32] = {
+                particleLinger: option[f32] = {
                     11
                 }
-                EmitterName: string = "Temp_BurstUp"
-                BirthOrbitalVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 1, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                emitterName: string = "Temp_BurstUp"
+                birthOrbitalVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 1, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
                             }
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 1, 0 }
                         }
                     }
                 }
-                BirthVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 200, 500, 200 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                birthVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { 200, 500, 200 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
                             }
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.5
                                     1
                                 }
                             }
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
                             }
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 200, 500, 200 }
                         }
                     }
                 }
-                BirthDrag: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 3, 3, 3 }
+                birthDrag: embed = ValueVector3 {
+                    constantValue: vec3 = { 3, 3, 3 }
                 }
-                0x3bf0b4ed: pointer = 0xee39916f {
-                    EmitOffset: vec3 = { -36, -15, 1.5 }
+                SpawnShape: pointer = 0xee39916f {
+                    emitOffset: vec3 = { -36, -15, 1.5 }
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                EmitterPosition: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                         }
                     }
                 }
-                BlendMode: u8 = 5
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 0.68235296, 0.31764707, 0.278431386, 1 }
+                blendMode: u8 = 5
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 0.68235296, 0.31764707, 0.278431386, 1 }
                 }
-                Color: embed = ValueColor {
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.150000006
                             0.5
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 1, 1, 0 }
                             { 1, 0.58431375, 0.580392182, 1 }
                             { 0.152941182, 0.0627451017, 0.0196078438, 1 }
@@ -3349,21 +3349,21 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                IsDirectionOriented: flag = true
-                IsUniformScale: flag = true
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 2, 30, 50 }
+                isDirectionOriented: flag = true
+                isUniformScale: flag = true
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 2, 30, 50 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             0.150000006
                             0.265079379
                             0.758708596
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                             { 0.5, 1, 0 }
                             { 3, 1, 1 }
@@ -3372,141 +3372,141 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Idle_Embers.dds"
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Idle_Embers.dds"
             }
             VfxEmitterDefinitionData {
-                Rate: embed = ValueFloat {
-                    ConstantValue: f32 = 10
+                rate: embed = ValueFloat {
+                    constantValue: f32 = 10
                 }
-                ParticleLifetime: embed = ValueFloat {
-                    ConstantValue: f32 = 0.5
-                    Dynamics: pointer = VfxAnimatedFloatVariableData {
-                        ProbabilityTables: list[pointer] = {
+                particleLifetime: embed = ValueFloat {
+                    constantValue: f32 = 0.5
+                    dynamics: pointer = VfxAnimatedFloatVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     1
                                     1.25
                                 }
                             }
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[f32] = {
+                        values: list[f32] = {
                             0.5
                         }
                     }
                 }
-                ParticleLinger: option[f32] = {
+                particleLinger: option[f32] = {
                     11
                 }
-                EmitterName: string = "Temp_BurstUp1"
-                BirthOrbitalVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 0, 1, 0 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                emitterName: string = "Temp_BurstUp1"
+                birthOrbitalVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { 0, 1, 0 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
                             }
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 1, 0 }
                         }
                     }
                 }
-                BirthVelocity: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 200, 500, 200 }
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                birthVelocity: embed = ValueVector3 {
+                    constantValue: vec3 = { 200, 500, 200 }
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
                             }
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     0.5
                                     1
                                 }
                             }
                             VfxProbabilityTableData {
-                                KeyTimes: list[f32] = {
+                                keyTimes: list[f32] = {
                                     0
                                     1
                                 }
-                                KeyValues: list[f32] = {
+                                keyValues: list[f32] = {
                                     -1
                                     1
                                 }
                             }
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 200, 500, 200 }
                         }
                     }
                 }
-                BirthDrag: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 3, 3, 3 }
+                birthDrag: embed = ValueVector3 {
+                    constantValue: vec3 = { 3, 3, 3 }
                 }
-                0x3bf0b4ed: pointer = 0xee39916f {
-                    EmitOffset: vec3 = { -36, -15, 1.5 }
+                SpawnShape: pointer = 0xee39916f {
+                    emitOffset: vec3 = { -36, -15, 1.5 }
                 }
-                0x563d4a22: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        ProbabilityTables: list[pointer] = {
+                EmitterPosition: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        probabilityTables: list[pointer] = {
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                             VfxProbabilityTableData {}
                         }
-                        Times: list[f32] = {
+                        times: list[f32] = {
                             0
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                         }
                     }
                 }
-                BlendMode: u8 = 2
-                BirthColor: embed = ValueColor {
-                    ConstantValue: vec4 = { 1, 0.235294119, 0.0431372561, 1 }
+                blendMode: u8 = 2
+                birthColor: embed = ValueColor {
+                    constantValue: vec4 = { 1, 0.235294119, 0.0431372561, 1 }
                 }
-                Color: embed = ValueColor {
-                    Dynamics: pointer = VfxAnimatedColorVariableData {
-                        Times: list[f32] = {
+                color: embed = ValueColor {
+                    dynamics: pointer = VfxAnimatedColorVariableData {
+                        times: list[f32] = {
                             0
                             0.150000006
                             0.5
                             1
                         }
-                        Values: list[vec4] = {
+                        values: list[vec4] = {
                             { 1, 1, 1, 0 }
                             { 1, 0.58431375, 0.580392182, 1 }
                             { 0.980392158, 0.419607848, 0.145098045, 1 }
@@ -3514,15 +3514,15 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                IsDirectionOriented: flag = true
-                IsUniformScale: flag = true
-                DirectionVelocityScale: f32 = 0.00700000022
-                BirthScale0: embed = ValueVector3 {
-                    ConstantValue: vec3 = { 10, 30, 50 }
+                isDirectionOriented: flag = true
+                isUniformScale: flag = true
+                directionVelocityScale: f32 = 0.00700000022
+                birthScale0: embed = ValueVector3 {
+                    constantValue: vec3 = { 10, 30, 50 }
                 }
-                Scale0: embed = ValueVector3 {
-                    Dynamics: pointer = VfxAnimatedVector3fVariableData {
-                        Times: list[f32] = {
+                scale0: embed = ValueVector3 {
+                    dynamics: pointer = VfxAnimatedVector3fVariableData {
+                        times: list[f32] = {
                             0
                             0.150000006
                             0.265079379
@@ -3536,7 +3536,7 @@ entries: map[hash,embed] = {
                             0.939909279
                             1
                         }
-                        Values: list[vec3] = {
+                        values: list[vec3] = {
                             { 0, 0, 0 }
                             { 0.5, 1, 0 }
                             { 3, 1, 1 }
@@ -3552,210 +3552,210 @@ entries: map[hash,embed] = {
                         }
                     }
                 }
-                Texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_motes.dds"
+                texture: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_I_motes.dds"
             }
         }
-        ParticleName: string = "Hecarim_Base_I_HeadTrail"
-        ParticlePath: string = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_I_HeadTrail"
+        particleName: string = "Hecarim_Base_I_HeadTrail"
+        particlePath: string = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_I_HeadTrail"
     }
     "Characters/Hecarim/Skins/Skin0/Materials/Hecarim_Scrolling_ALphaMasked_inst" = StaticMaterialDef {
-        Name: string = "Characters/Hecarim/Skins/Skin0/Materials/Hecarim_Scrolling_ALphaMasked_inst"
-        SamplerValues: list2[embed] = {
+        name: string = "Characters/Hecarim/Skins/Skin0/Materials/Hecarim_Scrolling_ALphaMasked_inst"
+        samplerValues: list2[embed] = {
             StaticMaterialShaderSamplerDef {
-                SamplerName: string = "Diffuse_Texture"
-                TextureName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Material_Mask.tex"
-                AddressW: u32 = 1
-            }
-            StaticMaterialShaderSamplerDef {
-                SamplerName: string = "Main_Texture"
-                TextureName: string = "ASSETS/Characters/Hecarim/Skins/Base/Hecarim_base_TX_CM.tex"
-                AddressW: u32 = 1
+                samplerName: string = "Diffuse_Texture"
+                textureName: string = "ASSETS/Characters/Hecarim/Skins/Base/Particles/Hecarim_Base_Material_Mask.tex"
+                addressW: u32 = 1
             }
             StaticMaterialShaderSamplerDef {
-                SamplerName: string = "OutlineMask_Texture"
-                TextureName: string = "ASSETS/Shared/Materials/black.dds"
-                AddressU: u32 = 2
-                AddressV: u32 = 2
-                AddressW: u32 = 2
+                samplerName: string = "Main_Texture"
+                textureName: string = "ASSETS/Characters/Hecarim/Skins/Base/Hecarim_base_TX_CM.tex"
+                addressW: u32 = 1
+            }
+            StaticMaterialShaderSamplerDef {
+                samplerName: string = "OutlineMask_Texture"
+                textureName: string = "ASSETS/Shared/Materials/black.dds"
+                addressU: u32 = 2
+                addressV: u32 = 2
+                addressW: u32 = 2
             }
         }
-        ParamValues: list2[embed] = {
+        paramValues: list2[embed] = {
             StaticMaterialShaderParamDef {
-                Name: string = "OutlineMask_Texture_B_UV"
-                Value: vec4 = { 1, 1, 0, 0 }
+                name: string = "OutlineMask_Texture_B_UV"
+                value: vec4 = { 1, 1, 0, 0 }
             }
             StaticMaterialShaderParamDef {
-                Name: string = "ScrollSpeedBase"
-                Value: vec4 = { 0.0500000007, -0.600000024, 0, 0 }
+                name: string = "ScrollSpeedBase"
+                value: vec4 = { 0.0500000007, -0.600000024, 0, 0 }
             }
             StaticMaterialShaderParamDef {
-                Name: string = "ScrollSpeedBlend"
-                Value: vec4 = { -0.0500000007, -0.600000024, 0, 0 }
+                name: string = "ScrollSpeedBlend"
+                value: vec4 = { -0.0500000007, -0.600000024, 0, 0 }
             }
             StaticMaterialShaderParamDef {
-                Name: string = "TintColor"
-                Value: vec4 = { 1, 1, 1, 1 }
+                name: string = "TintColor"
+                value: vec4 = { 1, 1, 1, 1 }
             }
             StaticMaterialShaderParamDef {
-                Name: string = "Base_Tile"
-                Value: vec4 = { 5, 4, 0, 0 }
+                name: string = "Base_Tile"
+                value: vec4 = { 5, 4, 0, 0 }
             }
             StaticMaterialShaderParamDef {
-                Name: string = "Blend_Tile"
-                Value: vec4 = { 10, 4, 0, 0 }
+                name: string = "Blend_Tile"
+                value: vec4 = { 10, 4, 0, 0 }
             }
             StaticMaterialShaderParamDef {
-                Name: string = "BaseMat_Tint"
-                Value: vec4 = { 0.100000001, 0.5, 0.5, 1 }
+                name: string = "BaseMat_Tint"
+                value: vec4 = { 0.100000001, 0.5, 0.5, 1 }
             }
             StaticMaterialShaderParamDef {
-                Name: string = "BlendMat_Tint"
-                Value: vec4 = { 0, 1.60000002, 1.5, 1 }
+                name: string = "BlendMat_Tint"
+                value: vec4 = { 0, 1.60000002, 1.5, 1 }
             }
             StaticMaterialShaderParamDef {
-                Name: string = "MaskStrength"
-                Value: vec4 = { 0.324999988, 0, 0, 0 }
+                name: string = "MaskStrength"
+                value: vec4 = { 0.324999988, 0, 0, 0 }
             }
             StaticMaterialShaderParamDef {
-                Name: string = "BloomValue"
-                Value: vec4 = { 0.875, 0, 0, 0 }
+                name: string = "BloomValue"
+                value: vec4 = { 0.875, 0, 0, 0 }
             }
             StaticMaterialShaderParamDef {
-                Name: string = "OutlineColor"
-                Value: vec4 = { 0, 0, 0, 1 }
+                name: string = "OutlineColor"
+                value: vec4 = { 0, 0, 0, 1 }
             }
             StaticMaterialShaderParamDef {
-                Name: string = "MainTex_TintColor"
-                Value: vec4 = { 1, 1, 1, 1 }
+                name: string = "MainTex_TintColor"
+                value: vec4 = { 1, 1, 1, 1 }
             }
             StaticMaterialShaderParamDef {
-                Name: string = "OutlineControl"
+                name: string = "OutlineControl"
             }
             StaticMaterialShaderParamDef {
-                Name: string = "OutlineMask_Strength"
-                Value: vec4 = { 1, 0, 0, 0 }
+                name: string = "OutlineMask_Strength"
+                value: vec4 = { 1, 0, 0, 0 }
             }
             StaticMaterialShaderParamDef {
-                Name: string = "WaveController"
+                name: string = "WaveController"
             }
             StaticMaterialShaderParamDef {
-                Name: string = "WaveStrength"
+                name: string = "WaveStrength"
             }
             StaticMaterialShaderParamDef {
-                Name: string = "AlphaClipValue"
+                name: string = "AlphaClipValue"
             }
             StaticMaterialShaderParamDef {
-                Name: string = "AlphaClipNoiseStrength"
+                name: string = "AlphaClipNoiseStrength"
             }
             StaticMaterialShaderParamDef {
-                Name: string = "Bloom_TintColor"
-                Value: vec4 = { 1, 1, 1, 1 }
+                name: string = "Bloom_TintColor"
+                value: vec4 = { 1, 1, 1, 1 }
             }
             StaticMaterialShaderParamDef {
-                Name: string = "NoiseUV"
-                Value: vec4 = { 5, 5, 0, 0 }
+                name: string = "NoiseUV"
+                value: vec4 = { 5, 5, 0, 0 }
             }
             StaticMaterialShaderParamDef {
-                Name: string = "ScrollSpeedMainTex"
+                name: string = "ScrollSpeedMainTex"
             }
             StaticMaterialShaderParamDef {
-                Name: string = "MainTex_Tile"
-                Value: vec4 = { 1, 1, 0, 0 }
+                name: string = "MainTex_Tile"
+                value: vec4 = { 1, 1, 0, 0 }
             }
             StaticMaterialShaderParamDef {
-                Name: string = "Alpha_Control"
+                name: string = "Alpha_Control"
             }
         }
-        Switches: list2[embed] = {
+        switches: list2[embed] = {
             StaticMaterialSwitchDef {
-                Name: string = "USE_OUTLINEMASK_B_ALPHA"
-                On: bool = false
+                name: string = "USE_OUTLINEMASK_B_ALPHA"
+                on: bool = false
             }
             StaticMaterialSwitchDef {
-                Name: string = "BLENDCOLOR_ON"
-                On: bool = false
+                name: string = "BLENDCOLOR_ON"
+                on: bool = false
             }
             StaticMaterialSwitchDef {
-                Name: string = "ADDITIVEALPHA_ON"
-                On: bool = false
+                name: string = "ADDITIVEALPHA_ON"
+                on: bool = false
             }
             StaticMaterialSwitchDef {
-                Name: string = "MASK_ON"
+                name: string = "MASK_ON"
             }
             StaticMaterialSwitchDef {
-                Name: string = "MAINTEX_ON"
+                name: string = "MAINTEX_ON"
             }
             StaticMaterialSwitchDef {
-                Name: string = "OUTLINE_ON"
-                On: bool = false
+                name: string = "OUTLINE_ON"
+                on: bool = false
             }
             StaticMaterialSwitchDef {
-                Name: string = "OUTLINE_MASK_ON"
-                On: bool = false
+                name: string = "OUTLINE_MASK_ON"
+                on: bool = false
             }
             StaticMaterialSwitchDef {
-                Name: string = "ALPHABLEND_MAIN"
-                On: bool = false
+                name: string = "ALPHABLEND_MAIN"
+                on: bool = false
             }
             StaticMaterialSwitchDef {
-                Name: string = "USE_MAINTEXCOLOR"
-                On: bool = false
+                name: string = "USE_MAINTEXCOLOR"
+                on: bool = false
             }
             StaticMaterialSwitchDef {
-                Name: string = "DEFORM_ON"
-                On: bool = false
+                name: string = "DEFORM_ON"
+                on: bool = false
             }
             StaticMaterialSwitchDef {
-                Name: string = "TWO_D_DEFORM_ON"
-                On: bool = false
+                name: string = "TWO_D_DEFORM_ON"
+                on: bool = false
             }
             StaticMaterialSwitchDef {
-                Name: string = "USE_MAINTEXALPHA"
-                On: bool = false
+                name: string = "USE_MAINTEXALPHA"
+                on: bool = false
             }
             StaticMaterialSwitchDef {
-                Name: string = "ALPHACLIP_ON"
-                On: bool = false
+                name: string = "ALPHACLIP_ON"
+                on: bool = false
             }
             StaticMaterialSwitchDef {
-                Name: string = "BLOOM_TINTCOLOR_ON"
-                On: bool = false
+                name: string = "BLOOM_TINTCOLOR_ON"
+                on: bool = false
             }
             StaticMaterialSwitchDef {
-                Name: string = "SCROLL_MAIN_TEX"
-                On: bool = false
+                name: string = "SCROLL_MAIN_TEX"
+                on: bool = false
             }
         }
-        ShaderMacros: map[string,string] = {
+        shaderMacros: map[string,string] = {
             "NUM_BLEND_WEIGHTS" = "4"
         }
-        Techniques: list[embed] = {
+        techniques: list[embed] = {
             StaticMaterialTechniqueDef {
-                Name: string = "normal"
-                Passes: list[embed] = {
+                name: string = "normal"
+                passes: list[embed] = {
                     StaticMaterialPassDef {
-                        Shader: link = 0xead7a1f5
-                        BlendEnable: bool = true
-                        SrcColorBlendFactor: u32 = 6
-                        SrcAlphaBlendFactor: u32 = 6
-                        DstColorBlendFactor: u32 = 7
-                        DstAlphaBlendFactor: u32 = 7
+                        shader: link = "Shaders/SkinnedMesh/AlphaBlend_Additive_Scroll_Packed"
+                        blendEnable: bool = true
+                        srcColorBlendFactor: u32 = 6
+                        srcAlphaBlendFactor: u32 = 6
+                        dstColorBlendFactor: u32 = 7
+                        dstAlphaBlendFactor: u32 = 7
                     }
                 }
             }
         }
-        ChildTechniques: list[embed] = {
+        childTechniques: list[embed] = {
             StaticMaterialChildTechniqueDef {
-                Name: string = "transition"
-                ParentName: string = "normal"
-                ShaderMacros: map[string,string] = {
+                name: string = "transition"
+                parentName: string = "normal"
+                shaderMacros: map[string,string] = {
                     "TRANSITION" = "1"
                 }
             }
         }
     }
     "Characters/Hecarim/Skins/Skin0/Resources" = ResourceResolver {
-        ResourceMap: map[hash,link] = {
+        resourceMap: map[hash,link] = {
             "Hecarim_BA1" = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_BA1"
             "Hecarim_BA1_weapon" = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_BA1_weapon"
             "Hecarim_BA2" = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_BA2"
@@ -3811,13 +3811,13 @@ entries: map[hash,embed] = {
             "Hecarim_W_syphon" = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_W_syphon"
             "Hecarim_W_tar" = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_W_tar"
             "Hecarim_E_speed_buf_02" = 0x00000000
-            0xd106ed5a = 0x5cd20cfc
-            0xe81102e6 = 0x0b2dba04
-            0xbd643545 = 0xf1efcdcb
-            0xad31d8e1 = 0x3f3ae293
-            0xff9214d4 = 0x9807e366
-            0x7790165d = 0xf096b0db
-            0xcab8b6eb = 0xfaef2bd9
+            "Hecarim_BA_tar_Left" = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_BA_tar_Left"
+            "Hecarim_Q_SmokeChild" = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_Q_SmokeChild"
+            "Hecarim_Q_SmokeChildSmall" = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_Q_SmokeChildSmall"
+            "Hecarim_E_speed_buf_2" = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_E_speed_buf_2"
+            "Hecarim_R_Hooves" = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_R_Hooves"
+            "Hecarim_R_Hooves_Low" = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_R_Hooves_Low"
+            "Hecarim_Idle_Tail_Alpha" = "Characters/Hecarim/Skins/Skin0/Particles/Hecarim_Base_Idle_Tail_Alpha"
         }
     }
 }
